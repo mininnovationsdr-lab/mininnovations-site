@@ -201,6 +201,12 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--terracota-claro)
 form .btn{justify-content:center}
 form small{color:var(--arena);opacity:.75;font-size:12.5px;text-align:center}
 
+.resena{background:var(--negro-2);color:var(--crema);border-top:1px solid var(--linea);padding:56px 0}
+.resena-in{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;flex-wrap:wrap}
+.resena h2{font-size:clamp(26px,3.4vw,42px);color:var(--crema);margin:12px 0 8px}
+.resena h2 .serif{color:var(--terracota-claro)}
+.resena p{color:var(--arena);max-width:520px}
+.resena .estrellas{letter-spacing:.2em;color:var(--terracota-claro);font-size:18px;margin-bottom:6px}
 footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--linea);padding:26px 0;font-size:14px}
 .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .foot nav{display:flex;gap:22px}
@@ -516,6 +522,18 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
       <button class="btn btn-terra" type="submit">Enviar por WhatsApp <span class="flecha">↗</span></button>
       <small>Se abre WhatsApp con tu mensaje listo para enviar.</small>
     </form>
+  </div>
+</section>
+
+<section class="resena" id="resenas" aria-label="Reseñas">
+  <div class="wrap resena-in">
+    <div>
+      <div class="estrellas" aria-hidden="true">★★★★★</div>
+      <span class="eyebrow">Reseñas</span>
+      <h2>¿Trabajaste con nosotros? <span class="serif">Cuéntalo.</span></h2>
+      <p>Tu opinión en Google toma un minuto y ayuda a que otros negocios de Santiago nos encuentren.</p>
+    </div>
+    <a href="https://g.page/r/CfN-sFkfXyQ8EBM/review" target="_blank" rel="noopener" class="btn btn-terra">Dejar una reseña en Google</a>
   </div>
 </section>
 </main>
