@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /gracias.html
+Disallow: /reel_01.html
+Disallow: /Websitemin.html
+
+Sitemap: https://mininnovations.com/sitemap.xml
