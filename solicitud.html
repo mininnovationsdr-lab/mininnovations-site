@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitud de servicios — m. innovations</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --negro:     #1C1C1A;
+  --terracota: #B5614A;
+  --crema:     #F2EDE6;
+  --sage:      #8FAF8F;
+  --arena:     #D4C5B0;
+  --crema2:    #EDE7DE;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--crema);
+  color: var(--negro);
+  min-height: 100vh;
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--negro);
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo img {
+  width: 120px;
+  display: block;
+}
+.nav-back {
+  font-size: 13px;
+  color: var(--arena);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--crema); }
+.nav-back svg { width: 16px; height: 16px; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--negro);
+  padding: 56px 40px 64px;
+  text-align: center;
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(181,97,74,0.2);
+  border: 1px solid rgba(181,97,74,0.4);
+  color: var(--terracota);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 900;
+  color: var(--crema);
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.hero h1 span { color: var(--terracota); }
+.hero p {
+  font-size: 16px;
+  color: var(--arena);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── LAYOUT ── */
+.layout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { order: -1; }
+  nav { padding: 16px 20px; }
+  .hero { padding: 40px 20px 48px; }
+}
+
+/* ── FORM CARD ── */
+.form-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+}
+.form-card-header {
+  background: var(--negro);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.form-card-header-icon {
+  width: 36px; height: 36px;
+  background: rgba(181,97,74,0.2);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.form-card-header-text .label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--arena);
+  margin-bottom: 2px;
+}
+.form-card-header-text .title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--crema);
+}
+
+form { padding: 28px; }
+
+/* ── FIELD GROUPS ── */
+.field-group {
+  margin-bottom: 20px;
+}
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+@media (max-width: 520px) {
+  .field-row { grid-template-columns: 1fr; }
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--negro);
+  margin-bottom: 7px;
+}
+label .req {
+  color: var(--terracota);
+  margin-left: 2px;
+}
+label .opt {
+  font-weight: 400;
+  color: #aaa;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--arena);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--negro);
+  background: var(--crema);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+input::placeholder, textarea::placeholder { color: #bbb; }
+input:focus, textarea:focus, select:focus {
+  border-color: var(--terracota);
+  box-shadow: 0 0 0 3px rgba(181,97,74,0.12);
+  background: white;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231C1C1A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* ── CHECKBOX GRID ── */
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  padding: 10px 12px;
+  border: 1.5px solid var(--arena);
+  border-radius: 10px;
+  background: var(--crema);
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+.check-item:has(input:checked) {
+  border-color: var(--terracota);
+  background: rgba(181,97,74,0.07);
+}
+.check-item input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: var(--terracota);
+  flex-shrink: 0;
+  cursor: pointer;
+  margin: 0; padding: 0;
+  border: none; background: none;
+}
+.check-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--negro);
+  line-height: 1.2;
+}
+
+/* ── RADIO GRID ── */
+.radio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+}
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  padding: 10px 12px;
+  border: 1.5px solid var(--arena);
+  border-radius: 10px;
+  background: var(--crema);
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+.radio-item:has(input:checked) {
+  border-color: var(--terracota);
+  background: rgba(181,97,74,0.07);
+}
+.radio-item input[type="radio"] {
+  width: 16px; height: 16px;
+  accent-color: var(--terracota);
+  flex-shrink: 0;
+  cursor: pointer;
+  margin: 0; padding: 0;
+  border: none; background: none;
+}
+.radio-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--negro);
+  line-height: 1.3;
+}
+
+/* ── DIVIDER ── */
+.form-divider {
+  height: 1px;
+  background: var(--crema2);
+  margin: 24px 0;
+}
+.form-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin-bottom: 16px;
+}
+
+/* ── SUBMIT ── */
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--terracota);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-submit:hover {
+  background: #a0543e;
+  transform: translateY(-1px);
+}
+.btn-submit:active { transform: translateY(0); }
+
+.form-note {
+  text-align: center;
+  font-size: 11px;
+  color: #bbb;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+/* ── SUCCESS STATE ── */
+.success-state {
+  display: none;
+  padding: 48px 28px;
+  text-align: center;
+}
+.success-icon {
+  width: 64px; height: 64px;
+  background: rgba(143,175,143,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+.success-state h3 {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--negro);
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.success-state p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.7;
+  max-width: 300px;
+  margin: 0 auto 24px;
+}
+.btn-back {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--negro);
+  color: var(--crema);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-back:hover { opacity: 0.8; }
+
+/* ── SIDEBAR ── */
+.sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+.sidebar-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.sidebar-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin-bottom: 14px;
+}
+
+.plan-mini {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--crema2);
+}
+.plan-mini:last-child { border-bottom: none; padding-bottom: 0; }
+.plan-mini:first-of-type { padding-top: 0; }
+.plan-mini-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--arena);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.plan-mini.featured .plan-mini-dot { background: var(--terracota); }
+.plan-mini-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--negro);
+  margin-bottom: 2px;
+}
+.plan-mini-price {
+  font-size: 12px;
+  color: var(--terracota);
+  font-weight: 600;
+}
+.plan-mini-desc {
+  font-size: 11px;
+  color: #999;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--crema2);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.contact-item:last-child { border-bottom: none; }
+.contact-item:hover { opacity: 0.7; }
+.contact-item-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.contact-item-label {
+  font-size: 11px;
+  color: #aaa;
+  margin-bottom: 1px;
+}
+.contact-item-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--negro);
+}
+
+.promise-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.promise-item:last-child { margin-bottom: 0; }
+.promise-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.promise-text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+.promise-text b { color: var(--negro); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--negro);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .f-brand {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--crema);
+}
+footer .f-brand span { color: var(--terracota); }
+footer .f-info {
+  font-size: 11px;
+  color: #555;
+  text-align: right;
+  line-height: 1.8;
+}
+
+@media (max-width: 520px) {
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+  footer .f-info { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo-blanco.png" alt="m. innovations">
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M10 3L5 8l5 5"/>
+    </svg>
+    Volver al inicio
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Solicitud de servicios</div>
+  <h1>Cuéntanos sobre<br>tu <span>marca</span></h1>
+  <p>Completa el formulario y te respondemos con una propuesta en menos de 24 horas.</p>
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- FORM -->
+  <div class="form-card">
+    <div class="form-card-header">
+      <div class="form-card-header-icon">📋</div>
+      <div class="form-card-header-text">
+        <div class="label">Paso 1 de 1</div>
+        <div class="title">Datos de tu negocio</div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      id="mainForm"
+    >
+      <!-- Web3Forms config -->
+      <input type="hidden" name="access_key" value="53bf55b2-d04f-4bf5-8e11-2dd302331fd0">
+      <input type="hidden" name="subject" value="✦ Nueva solicitud — m. innovations">
+      <input type="hidden" name="redirect" value="https://mininnovations.netlify.app/gracias.html">
+      <input type="hidden" name="from_name" value="m. innovations Website">
+      <!-- Anti-spam honeypot -->
+      <input type="text" name="botcheck" style="display:none;">
+
+      <div class="form-section-label">Información de contacto</div>
+
+      <div class="field-row">
+        <div>
+          <label>Nombre <span class="req">*</span></label>
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div>
+          <label>Negocio / Marca <span class="req">*</span></label>
+          <input type="text" name="negocio" placeholder="Nombre del negocio" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div>
+          <label>Correo electrónico <span class="req">*</span></label>
+          <input type="email" name="correo" placeholder="tu@correo.com" required>
+        </div>
+        <div>
+          <label>WhatsApp <span class="req">*</span></label>
+          <input type="tel" name="whatsapp" placeholder="+1 (849) 000-0000" required>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Instagram / TikTok <span class="opt">(opcional)</span></label>
+        <input type="text" name="redes" placeholder="@tunegocio">
+      </div>
+
+      <div class="form-divider"></div>
+      <div class="form-section-label">Sobre tu proyecto</div>
+
+      <div class="field-group">
+        <label>¿Qué servicio te interesa? <span class="req">*</span></label>
+        <div class="check-grid">
+          <label class="check-item">
+            <input type="checkbox" name="servicio" value="Redes sociales">
+            <span>📱 Redes sociales</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="servicio" value="Branding / Logo">
+            <span>🎨 Branding / Logo</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="servicio" value="Marketing digital">
+            <span>📣 Marketing digital</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="servicio" value="Pauta / Ads">
+            <span>🎯 Pauta / Ads</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="servicio" value="Produccion de contenido">
+            <span>🎬 Producción</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="servicio" value="No sé todavía">
+            <span>🤔 No sé todavía</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>¿Qué plan te interesa? <span class="opt">(opcional)</span></label>
+        <div class="radio-grid">
+          <label class="radio-item">
+            <input type="radio" name="plan" value="Starter — RD$16,500">
+            <span>⭐ Starter</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="plan" value="Crecimiento — RD$22,000">
+            <span>📈 Crecimiento</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="plan" value="Completo — RD$32,000">
+            <span>🔥 Completo</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="plan" value="Necesito asesoría">
+            <span>💬 Necesito asesoría</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>¿Cuál es tu objetivo principal? <span class="req">*</span></label>
+        <select name="objetivo" required>
+          <option value="" disabled selected>Selecciona un objetivo...</option>
+          <option>Aumentar seguidores y alcance</option>
+          <option>Generar más ventas</option>
+          <option>Posicionar mi marca</option>
+          <option>Crear identidad visual desde cero</option>
+          <option>Mejorar la imagen que ya tengo</option>
+          <option>Todo lo anterior</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label>¿Tienes identidad visual? <span class="req">*</span></label>
+        <div class="radio-grid">
+          <label class="radio-item">
+            <input type="radio" name="identidad" value="Sí, tengo logo y colores" required>
+            <span>✅ Sí, tengo logo y colores</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="identidad" value="Tengo logo pero quiero mejorarlo">
+            <span>🔄 Tengo logo pero quiero mejorarlo</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="identidad" value="No, empezando desde cero">
+            <span>🆕 No, empezando desde cero</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-divider"></div>
+      <div class="form-section-label">Cuéntanos más</div>
+
+      <div class="field-group">
+        <label>¿En qué redes quieres tener presencia?</label>
+        <div class="check-grid">
+          <label class="check-item">
+            <input type="checkbox" name="plataformas" value="Meta (Instagram + Facebook)">
+            <span>📸 Meta (IG + FB)</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="plataformas" value="TikTok">
+            <span>🎵 TikTok</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="plataformas" value="LinkedIn">
+            <span>💼 LinkedIn</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="plataformas" value="YouTube">
+            <span>▶️ YouTube</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="plataformas" value="Pinterest">
+            <span>📌 Pinterest</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" name="plataformas" value="No sé todavía">
+            <span>🤔 No sé todavía</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>¿Algo más que quieras contarnos? <span class="opt">(opcional)</span></label>
+        <textarea name="mensaje" placeholder="Cuéntanos sobre tu negocio, tus clientes ideales, retos actuales o cualquier detalle que nos ayude a preparar la mejor propuesta..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Enviar solicitud
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </button>
+      <p class="form-note">Te respondemos en menos de 24 horas · Tu información es privada y segura 🔒</p>
+    </form>
+
+    <!-- SUCCESS STATE -->
+    <div class="success-state" id="successState">
+      <div class="success-icon">🎉</div>
+      <h3>¡Solicitud enviada!</h3>
+      <p>Recibimos tu información. Te contactaremos en menos de 24 horas con tu propuesta personalizada.</p>
+      <a href="index.html" class="btn-back">← Volver al inicio</a>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- PLANES RÁPIDOS -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">💰 Nuestros planes</div>
+
+      <div class="plan-mini">
+        <div class="plan-mini-dot"></div>
+        <div>
+          <div class="plan-mini-name">Starter</div>
+          <div class="plan-mini-price">RD$16,500/mes</div>
+          <div class="plan-mini-desc">Meta (IG+FB) · 12 posts · diseño gráfico</div>
+        </div>
+      </div>
+
+      <div class="plan-mini featured">
+        <div class="plan-mini-dot"></div>
+        <div>
+          <div class="plan-mini-name">Crecimiento ⭐</div>
+          <div class="plan-mini-price">RD$22,000/mes</div>
+          <div class="plan-mini-desc">Meta + TikTok · 20 posts · stories · 2 reels</div>
+        </div>
+      </div>
+
+      <div class="plan-mini">
+        <div class="plan-mini-dot"></div>
+        <div>
+          <div class="plan-mini-name">Completo</div>
+          <div class="plan-mini-price">RD$32,000/mes</div>
+          <div class="plan-mini-desc">3 redes · 30 posts · stories diarias · 4 reels · CM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO DIRECTO -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">📲 Contacto directo</div>
+
+      <a href="https://wa.me/18494601912" target="_blank" class="contact-item">
+        <div class="contact-item-icon" style="background:#E8F5E9;">💬</div>
+        <div>
+          <div class="contact-item-label">WhatsApp</div>
+          <div class="contact-item-value">+1 (849) 460-1912</div>
+        </div>
+      </a>
+
+      <a href="https://instagram.com/mininnovationsdr" target="_blank" class="contact-item">
+        <div class="contact-item-icon" style="background:#FCE4EC;">📸</div>
+        <div>
+          <div class="contact-item-label">Instagram</div>
+          <div class="contact-item-value">@mininnovationsdr</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- PROMESAS -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">✦ Lo que puedes esperar</div>
+
+      <div class="promise-item">
+        <div class="promise-icon">⚡</div>
+        <div class="promise-text"><b>Respuesta en 24 horas</b> — te enviamos una propuesta personalizada</div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-icon">🎯</div>
+        <div class="promise-text"><b>Sin compromiso</b> — la propuesta es totalmente gratuita</div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-icon">🤝</div>
+        <div class="promise-text"><b>Trato directo</b> — trabajas con el equipo, no con intermediarios</div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-icon">📊</div>
+        <div class="promise-text"><b>Resultados medibles</b> — informe mensual con métricas reales</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-brand">m<span>.</span> innovations</div>
+  <div class="f-info">
+    Santiago, República Dominicana<br>
+    +1 (849) 460-1912 · @mininnovationsdr
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('mainForm');
+
+  // Validation: at least one service checkbox must be checked
+  form.addEventListener('submit', function(e) {
+    const checkboxes = form.querySelectorAll('input[name="servicio"]:checked');
+    if (checkboxes.length === 0) {
+      e.preventDefault();
+      const grid = form.querySelector('.check-grid');
+      grid.style.outline = '2px solid var(--terracota)';
+      grid.style.borderRadius = '10px';
+      grid.style.padding = '8px';
+      grid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => {
+        grid.style.outline = '';
+        grid.style.padding = '';
+      }, 3000);
+      return;
+    }
+    // Button loading state
+    const btn = form.querySelector('.btn-submit');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Solicitud enviada! — m. innovations</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --negro: #1C1C1A;
+  --terracota: #B5614A;
+  --crema: #F2EDE6;
+  --sage: #8FAF8F;
+  --arena: #D4C5B0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--crema);
+  color: var(--negro);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  background: var(--negro);
+  padding: 18px 40px;
+}
+nav img { width: 110px; display: block; }
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 56px 48px;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.08);
+}
+.icon {
+  width: 80px; height: 80px;
+  background: rgba(143,175,143,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px;
+  margin: 0 auto 24px;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  margin-bottom: 12px;
+}
+h1 span { color: var(--terracota); }
+p {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.divider {
+  height: 1px;
+  background: #f0ebe4;
+  margin: 24px 0;
+}
+.promise {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  margin-bottom: 14px;
+}
+.promise:last-of-type { margin-bottom: 0; }
+.promise-icon {
+  width: 36px; height: 36px;
+  background: var(--crema);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.promise-text { font-size: 13px; color: #555; line-height: 1.4; }
+.promise-text b { color: var(--negro); }
+.btn-home {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: var(--negro);
+  color: var(--crema);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-home:hover { opacity: 0.8; }
+.btn-wa {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1.5px solid var(--arena);
+  color: var(--negro);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.btn-wa:hover { border-color: var(--terracota); }
+.btns { display: flex; flex-direction: column; gap: 0; align-items: center; }
+
+footer {
+  background: var(--negro);
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.f-brand { font-size: 14px; font-weight: 900; color: var(--crema); }
+.f-brand span { color: var(--terracota); }
+.f-info { font-size: 11px; color: #555; text-align: right; line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html"><img src="images/logo-blanco.png" alt="m. innovations"></a>
+</nav>
+
+<div class="main">
+  <div class="card">
+    <div class="icon">🎉</div>
+    <h1>¡Solicitud <span>enviada!</span></h1>
+    <p>Recibimos tu información. En menos de 24 horas te contactamos con una propuesta personalizada para tu negocio.</p>
+
+    <div class="divider"></div>
+
+    <div class="promise">
+      <div class="promise-icon">⚡</div>
+      <div class="promise-text"><b>Respuesta garantizada</b> en menos de 24 horas hábiles</div>
+    </div>
+    <div class="promise">
+      <div class="promise-icon">📊</div>
+      <div class="promise-text"><b>Propuesta a medida</b> — sin costos ocultos ni compromisos</div>
+    </div>
+    <div class="promise">
+      <div class="promise-icon">💬</div>
+      <div class="promise-text"><b>Te escribimos por WhatsApp</b> para coordinar una reunión si es necesario</div>
+    </div>
+
+    <div class="btns">
+      <a href="index.html" class="btn-home">← Volver al inicio</a>
+      <a href="https://wa.me/18494601912?text=Hola%2C%20acabo%20de%20enviar%20una%20solicitud%20en%20el%20sitio%20web%20de%20m.%20innovations%20%F0%9F%99%8C" target="_blank" class="btn-wa">💬 También escríbenos por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-brand">m<span>.</span> innovations</div>
+  <div class="f-info">Santiago, República Dominicana<br>+1 (849) 460-1912</div>
+</footer>
+
+</body>
+</html>
