@@ -14,7 +14,7 @@
 <style>
 :root {
   --negro:     #1C1C1A;
-  --terracota: #B5614A;
+  --terracota: #A65640; /* un poco más oscuro que #B5614A para que se lea bien (contraste) */
   --crema:     #F2EDE6;
   --sage:      #8FAF8F;
   --arena:     #D4C5B0;
@@ -174,7 +174,7 @@ label .req {
 }
 label .opt {
   font-weight: 400;
-  color: #aaa;
+  color: #6B655E;
   font-size: 11px;
   margin-left: 4px;
 }
@@ -197,7 +197,7 @@ select {
   appearance: none;
   -webkit-appearance: none;
 }
-input::placeholder, textarea::placeholder { color: #bbb; }
+input::placeholder, textarea::placeholder { color: #6B655E; }
 input:focus, textarea:focus, select:focus {
   border-color: var(--terracota);
   box-shadow: 0 0 0 3px rgba(181,97,74,0.12);
@@ -334,7 +334,7 @@ select {
 .form-note {
   text-align: center;
   font-size: 11px;
-  color: #bbb;
+  color: #6B655E;
   margin-top: 12px;
   line-height: 1.6;
 }
@@ -428,7 +428,7 @@ select {
 }
 .plan-mini-desc {
   font-size: 11px;
-  color: #999;
+  color: #6B655E;
   line-height: 1.5;
   margin-top: 3px;
 }
@@ -453,7 +453,7 @@ select {
 }
 .contact-item-label {
   font-size: 11px;
-  color: #aaa;
+  color: #6B655E;
   margin-bottom: 1px;
 }
 .contact-item-value {
@@ -506,6 +506,8 @@ footer .f-info {
   footer { flex-direction: column; gap: 12px; text-align: center; }
   footer .f-info { text-align: center; }
 }
+.hero-tag { color: #E3957C !important; }
+footer .f-info { color: #A39C92; }
 </style>
 </head>
 <body>
@@ -642,8 +644,8 @@ footer .f-info {
       </div>
 
       <div class="field-group">
-        <label>¿Cuál es tu objetivo principal? <span class="req">*</span></label>
-        <select name="objetivo" required>
+        <label for="objetivo">¿Cuál es tu objetivo principal? <span class="req">*</span></label>
+        <select name="objetivo" id="objetivo" required>
           <option value="" disabled selected>Selecciona un objetivo...</option>
           <option>Aumentar seguidores y alcance</option>
           <option>Generar más ventas</option>

@@ -27,10 +27,20 @@
 <meta name="twitter:description" content="MIN Innovations (m. innovations) es una agencia de marketing digital en Santiago, República Dominicana. Redes sociales, video, páginas web y branding.">
 <meta name="twitter:image" content="https://mininnovations.com/images/og-logo.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://mininnovations.com/#website", "url": "https://mininnovations.com/", "name": "MIN Innovations", "alternateName": ["m. innovations", "min innovations", "m.innovations", "M Innovations", "mininnovations", "MIN Innovations Santiago"], "inLanguage": "es-DO", "publisher": {"@id": "https://mininnovations.com/#org"}}, {"@type": "ProfessionalService", "@id": "https://mininnovations.com/#org", "name": "MIN Innovations", "alternateName": ["m. innovations", "min innovations", "m.innovations", "M Innovations", "mininnovations", "MIN Innovations Santiago"], "url": "https://mininnovations.com/", "logo": "https://mininnovations.com/favicon-512.png", "image": "https://mininnovations.com/images/og-logo.jpg", "description": "MIN Innovations (m. innovations) es una agencia de marketing digital en Santiago, República Dominicana. Redes sociales, video, páginas web y branding.", "telephone": "+1-849-460-1912", "email": "mininnovationsdr@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Santiago de los Caballeros", "addressRegion": "Santiago", "addressCountry": "DO"}, "areaServed": [{"@type": "City", "name": "Santiago de los Caballeros"}, {"@type": "Country", "name": "República Dominicana"}], "serviceType": ["Manejo de redes sociales", "Producción de video", "Diseño de páginas web", "Branding e identidad visual", "Marketing digital"], "sameAs": ["https://www.instagram.com/mininnovations/", "https://www.behance.net/mininnovationsdo"], "potentialAction": {"@type": "ReserveAction", "name": "Agendar una llamada virtual", "target": {"@type": "EntryPoint", "urlTemplate": "https://calendar.app.google/TKrikrU4YgMFgNCTA", "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]}}}]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/poppins-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Letras guardadas en el propio sitio (antes venían de Google Fonts) */
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/poppins-600-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/poppins-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/poppins-800-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/instrument-serif-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Respaldos con la misma medida, para que el texto no salte al cargar la letra */
+@font-face{font-family:'Poppins respaldo';src:local('Arial Bold'),local('Arial-BoldMT'),local('Arial');font-weight:800;size-adjust:109.3%;ascent-override:96%;descent-override:32%;line-gap-override:9.1%}
+@font-face{font-family:'Inter respaldo';src:local('Arial'),local('ArialMT');size-adjust:106.5%;ascent-override:91%;descent-override:22.7%;line-gap-override:0%}
+@font-face{font-family:'Instrument Serif respaldo';font-style:italic;src:local('Times New Roman Italic'),local('TimesNewRomanPS-ItalicMT'),local('Times New Roman');size-adjust:89.3%;ascent-override:110.8%;descent-override:34.7%;line-gap-override:0%}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --negro:#161614;
@@ -41,19 +51,22 @@
   --crema:#F2EDE6;
   --crema-2:#E9E2D8;
   --arena:#CFC1AC;
-  --gris:#77716A;
-  --display:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
-  --texto:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --gris:#67615A;
+  --terracota-texto:#9A4F3D; /* terracota para textos pequeños sobre crema */
+  --terracota-boton:#A65640; /* fondo de botones con letra blanca */
+  --display:'Poppins','Poppins respaldo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Instrument Serif','Instrument Serif respaldo',Georgia,'Times New Roman',serif;
+  --texto:'Inter','Inter respaldo',system-ui,-apple-system,'Segoe UI',sans-serif;
   --ancho:1200px;
 }
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:var(--texto);background:var(--crema);color:var(--negro);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .wrap{width:100%;max-width:var(--ancho);margin:0 auto;padding-inline:24px}
 .serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terracota)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terracota-texto)}
+.web .eyebrow,.contacto .eyebrow,.resena .eyebrow,.hero .eyebrow{color:var(--terracota-claro)}
 h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.02;text-wrap:balance}
 h2{font-size:clamp(34px,5.2vw,64px)}
 h2 .serif{font-size:1.08em;color:var(--terracota)}
@@ -71,8 +84,8 @@ h2 .serif{font-size:1.08em;color:var(--terracota)}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--texto);font-weight:600;font-size:15px;border-radius:100px;padding:14px 26px;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,border-color .2s;white-space:nowrap}
 .btn:hover{transform:translateY(-2px)}
 .btn-claro{background:var(--crema);color:var(--negro)}
-.btn-terra{background:var(--terracota);color:#fff}
-.btn-terra:hover{background:var(--terracota-claro)}
+.btn-terra{background:var(--terracota-boton);color:#fff}
+.btn-terra:hover{background:#8F4A39}
 .btn-linea{border-color:rgba(242,237,230,.28);color:var(--crema)}
 .btn-linea:hover{border-color:var(--crema)}
 .btn-oscuro{background:var(--negro);color:var(--crema)}
@@ -124,7 +137,7 @@ section{padding:110px 0}
 /* ── TRABAJO: REDES ── */
 .caso{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center;padding:44px 0;border-top:1px solid rgba(22,22,20,.14)}
 .caso:last-child{border-bottom:1px solid rgba(22,22,20,.14)}
-.caso-n{font-family:var(--display);font-weight:600;font-size:13px;color:var(--terracota);letter-spacing:.08em}
+.caso-n{font-family:var(--display);font-weight:600;font-size:13px;color:var(--terracota-texto);letter-spacing:.08em}
 .caso h3{font-size:clamp(28px,3.4vw,44px);margin:12px 0 8px}
 .caso-s{color:var(--gris);font-size:15px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px}
@@ -151,12 +164,12 @@ a.sitio:hover{transform:translateY(-6px);border-color:rgba(242,237,230,.4)}
 .sitio-p b{font-family:var(--display);font-weight:600;font-size:17px;display:block;line-height:1.25}
 .sitio-p span{font-size:13px;color:var(--arena)}
 .sitio-p em{font-style:normal;font-size:12px;font-weight:600;border:1px solid var(--linea);border-radius:100px;padding:4px 10px;color:var(--arena);white-space:nowrap}
-.sitio-p .flecha{width:34px;height:34px;flex:none;border-radius:50%;background:var(--terracota);display:grid;place-items:center;color:#fff;font-size:15px}
+.sitio-p .flecha{width:34px;height:34px;flex:none;border-radius:50%;background:var(--terracota-boton);display:grid;place-items:center;color:#fff;font-size:15px}
 
 /* ── SERVICIOS ── */
 .serv{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1.3fr);gap:24px;align-items:baseline;padding:30px 0;border-top:1px solid rgba(22,22,20,.14)}
 .serv:last-child{border-bottom:1px solid rgba(22,22,20,.14)}
-.serv i{font-style:normal;font-family:var(--display);font-weight:600;font-size:13px;color:var(--terracota)}
+.serv i{font-style:normal;font-family:var(--display);font-weight:600;font-size:13px;color:var(--terracota-texto)}
 .serv h3{font-size:clamp(24px,3vw,38px)}
 .serv p{color:var(--gris);font-size:15px}
 
@@ -212,7 +225,8 @@ form small{color:var(--arena);opacity:.75;font-size:12.5px;text-align:center}
 .resena .estrellas{letter-spacing:.2em;color:var(--terracota-claro);font-size:18px;margin-bottom:6px}
 footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--linea);padding:26px 0;font-size:14px}
 .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.foot nav{display:flex;gap:22px}
+.foot nav{display:flex;flex-wrap:wrap;gap:4px 22px}
+.foot nav a{display:inline-block;padding:6px 0}
 .foot a:hover{color:var(--crema)}
 
 /* ── APARICIÓN ── */
@@ -259,7 +273,7 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
 
 <header class="nav">
   <div class="nav-in">
-    <a href="#inicio" class="nav-logo" aria-label="m. innovations, inicio"><img src="images/logo-m.png" alt="m. innovations"></a>
+    <a href="#inicio" class="nav-logo" aria-label="m. innovations, inicio"><img src="images/logo-m.png" alt="m. innovations" width="426" height="289"></a>
     <ul class="nav-links">
       <li><a href="#trabajo">Trabajo</a></li>
       <li><a href="#web">Web</a></li>
@@ -290,12 +304,12 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
     <div class="marquee" id="marquee">
       <div class="marquee-track">
         <div class="marquee-set">
-          <a class="cliente" href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/clientes/tanya.jpg" alt="" width="48" height="48"><div><b>Tanya Gómez · Mr. Home</b><span>@tanya.mrhome</span></div></a>
-          <a class="cliente" href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/clientes/alfonsina.jpg" alt="" width="48" height="48"><div><b>Dra. Alfonsina Cruz</b><span>@dra.alfonsinacruz</span></div></a>
-          <a class="cliente" href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/clientes/cookies.jpg" alt="" width="48" height="48"><div><b>Los Cookies by Arlina</b><span>@loscookiesbyarlina</span></div></a>
-          <a class="cliente" href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/clientes/laura.jpg" alt="" width="48" height="48"><div><b>Laura Lizardo</b><span>@psilauralizardov</span></div></a>
-          <a class="cliente" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/clientes/duke.jpg" alt="" width="48" height="48"><div><b>Duke Fresh Haircuts</b><span>@dukefreshhaircuts</span></div></a>
-          <a class="cliente" href="https://www.instagram.com/grupoksird/" target="_blank" rel="noopener"><img src="images/clientes/ksi.jpg" alt="" width="48" height="48"><div><b>Grupo KSI</b><span>@grupoksird</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/clientes/tanya-96.webp" width="48" height="48" alt=""><div><b>Tanya Gómez · Mr. Home</b><span>@tanya.mrhome</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/clientes/alfonsina-96.webp" width="48" height="48" alt=""><div><b>Dra. Alfonsina Cruz</b><span>@dra.alfonsinacruz</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/clientes/cookies-96.webp" width="48" height="48" alt=""><div><b>Los Cookies by Arlina</b><span>@loscookiesbyarlina</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/clientes/laura-96.webp" width="48" height="48" alt=""><div><b>Laura Lizardo</b><span>@psilauralizardov</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/clientes/duke-96.webp" width="48" height="48" alt=""><div><b>Duke Fresh Haircuts</b><span>@dukefreshhaircuts</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/grupoksird/" target="_blank" rel="noopener"><img src="images/clientes/ksi-96.webp" width="48" height="48" alt=""><div><b>Grupo KSI</b><span>@grupoksird</span></div></a>
         </div>
       </div>
     </div>
@@ -330,9 +344,9 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <a class="ig" href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener">@tanya.mrhome <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-1.jpg" alt="Reel de Tanya Gómez en Expocibao 2026" loading="lazy"></a>
-        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-2.jpg" alt="Carrusel: ¿Qué tipo de comprador eres?" loading="lazy"></a>
-        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-3.jpg" alt="Reel del proyecto XVS en Santiago" loading="lazy"></a>
+        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-1.webp" srcset="images/trabajo/tanya-1-240.webp 240w, images/trabajo/tanya-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel de Tanya Gómez en Expocibao 2026" loading="lazy"></a>
+        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-2.webp" srcset="images/trabajo/tanya-2-240.webp 240w, images/trabajo/tanya-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Carrusel: ¿Qué tipo de comprador eres?" loading="lazy"></a>
+        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-3.webp" srcset="images/trabajo/tanya-3-240.webp 240w, images/trabajo/tanya-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel del proyecto XVS en Santiago" loading="lazy"></a>
       </div>
     </article>
 
@@ -345,9 +359,9 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <a class="ig" href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener">@dra.alfonsinacruz <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-1.jpg" alt="Reel: Las caries no aparecen de un día para otro" loading="lazy"></a>
-        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-2.jpg" alt="Reel: ¿Cuánta pasta dental necesita tu hijo?" loading="lazy"></a>
-        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-3.jpg" alt="Carrusel: Una nueva etapa" loading="lazy"></a>
+        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-1.webp" srcset="images/trabajo/alfonsina-1-240.webp 240w, images/trabajo/alfonsina-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Las caries no aparecen de un día para otro" loading="lazy"></a>
+        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-2.webp" srcset="images/trabajo/alfonsina-2-240.webp 240w, images/trabajo/alfonsina-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: ¿Cuánta pasta dental necesita tu hijo?" loading="lazy"></a>
+        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-3.webp" srcset="images/trabajo/alfonsina-3-240.webp 240w, images/trabajo/alfonsina-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Carrusel: Una nueva etapa" loading="lazy"></a>
       </div>
     </article>
 
@@ -360,9 +374,9 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <a class="ig" href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener">@loscookiesbyarlina <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-1.jpg" alt="Diseño: Fondant o suspiro para tu pastel de bodas" loading="lazy"></a>
-        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-2.jpg" alt="Arlina junto a un pastel de bodas" loading="lazy"></a>
-        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-3.jpg" alt="Reel: Me voy de gira" loading="lazy"></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-1.webp" srcset="images/trabajo/cookies-1-240.webp 240w, images/trabajo/cookies-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Diseño: Fondant o suspiro para tu pastel de bodas" loading="lazy"></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-2.webp" srcset="images/trabajo/cookies-2-240.webp 240w, images/trabajo/cookies-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Arlina junto a un pastel de bodas" loading="lazy"></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-3.webp" srcset="images/trabajo/cookies-3-240.webp 240w, images/trabajo/cookies-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Me voy de gira" loading="lazy"></a>
       </div>
     </article>
 
@@ -375,9 +389,9 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <a class="ig" href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener">@psilauralizardov <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-1.jpg" alt="Reel: ¿Quién estoy siendo en mi relación?" loading="lazy"></a>
-        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-2.jpg" alt="Reel: Quizás no vas tarde, solo te estás comparando" loading="lazy"></a>
-        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-3.jpg" alt="Reel: Me niego a tener un solo nicho" loading="lazy"></a>
+        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-1.webp" srcset="images/trabajo/laura-1-240.webp 240w, images/trabajo/laura-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: ¿Quién estoy siendo en mi relación?" loading="lazy"></a>
+        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-2.webp" srcset="images/trabajo/laura-2-240.webp 240w, images/trabajo/laura-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Quizás no vas tarde, solo te estás comparando" loading="lazy"></a>
+        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-3.webp" srcset="images/trabajo/laura-3-240.webp 240w, images/trabajo/laura-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Me niego a tener un solo nicho" loading="lazy"></a>
       </div>
     </article>
 
@@ -390,9 +404,9 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <a class="ig" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener">@dukefreshhaircuts <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-1.jpg" alt="Reel: POV, pague su chisme" loading="lazy"></a>
-        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-2.jpg" alt="Reel dentro de la barbería" loading="lazy"></a>
-        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-3.jpg" alt="Reel con consejo para barberos" loading="lazy"></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-1.webp" srcset="images/trabajo/duke-1-240.webp 240w, images/trabajo/duke-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: POV, pague su chisme" loading="lazy"></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-2.webp" srcset="images/trabajo/duke-2-240.webp 240w, images/trabajo/duke-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel dentro de la barbería" loading="lazy"></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-3.webp" srcset="images/trabajo/duke-3-240.webp 240w, images/trabajo/duke-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel con consejo para barberos" loading="lazy"></a>
       </div>
     </article>
   </div>
@@ -410,32 +424,32 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
     <div class="web-g">
       <a class="sitio rev" href="https://germosenfilms.com" target="_blank" rel="noopener">
         <div class="barra"><i></i><i></i><i></i></div>
-        <img src="images/web/germosen.jpg" alt="Sitio web de Germosen Films" loading="lazy">
+        <img src="images/web/germosen-800.webp" srcset="images/web/germosen-480.webp 480w, images/web/germosen-800.webp 800w, images/web/germosen.webp 1200w" sizes="(max-width:760px) calc(100vw - 48px), (max-width:960px) 46vw, 370px" width="1200" height="697" alt="Sitio web de Germosen Films" loading="lazy">
         <div class="sitio-p"><div><b>Germosen Films</b><span>Películas de bodas</span></div><span class="flecha">↗</span></div>
       </a>
       <a class="sitio rev" href="https://alfonsinacruz.pages.dev" target="_blank" rel="noopener">
         <div class="barra"><i></i><i></i><i></i></div>
-        <img src="images/web/alfonsina.jpg" alt="Sitio web de la Dra. Alfonsina Cruz" loading="lazy">
+        <img src="images/web/alfonsina-800.webp" srcset="images/web/alfonsina-480.webp 480w, images/web/alfonsina-800.webp 800w, images/web/alfonsina.webp 1200w" sizes="(max-width:760px) calc(100vw - 48px), (max-width:960px) 46vw, 370px" width="1200" height="697" alt="Sitio web de la Dra. Alfonsina Cruz" loading="lazy">
         <div class="sitio-p"><div><b>Dra. Alfonsina Cruz</b><span>Odontopediatría</span></div><span class="flecha">↗</span></div>
       </a>
       <a class="sitio rev" href="https://haciendagurabo.pages.dev" target="_blank" rel="noopener">
         <div class="barra"><i></i><i></i><i></i></div>
-        <img src="images/web/gurabo.jpg" alt="Sitio web de Hacienda Gurabo" loading="lazy">
+        <img src="images/web/gurabo-800.webp" srcset="images/web/gurabo-480.webp 480w, images/web/gurabo-800.webp 800w, images/web/gurabo.webp 1200w" sizes="(max-width:760px) calc(100vw - 48px), (max-width:960px) 46vw, 370px" width="1200" height="697" alt="Sitio web de Hacienda Gurabo" loading="lazy">
         <div class="sitio-p"><div><b>Hacienda Gurabo</b><span>Proyecto de solares · Grupo KSI</span></div><span class="flecha">↗</span></div>
       </a>
       <a class="sitio rev" href="https://portafoliokleria.pages.dev" target="_blank" rel="noopener">
         <div class="barra"><i></i><i></i><i></i></div>
-        <img src="images/web/kleria.jpg" alt="Portafolio web de Kleria González" loading="lazy">
+        <img src="images/web/kleria-800.webp" srcset="images/web/kleria-480.webp 480w, images/web/kleria-800.webp 800w, images/web/kleria.webp 1200w" sizes="(max-width:760px) calc(100vw - 48px), (max-width:960px) 46vw, 370px" width="1200" height="697" alt="Portafolio web de Kleria González" loading="lazy">
         <div class="sitio-p"><div><b>Kleria González</b><span>Diseño de interiores</span></div><span class="flecha">↗</span></div>
       </a>
       <a class="sitio rev" href="https://grupoksi.com" target="_blank" rel="noopener">
         <div class="barra"><i></i><i></i><i></i></div>
-        <img src="images/web/ksi.jpg" alt="Sitio web de Grupo KSI" loading="lazy">
+        <img src="images/web/ksi-800.webp" srcset="images/web/ksi-480.webp 480w, images/web/ksi-800.webp 800w, images/web/ksi.webp 1200w" sizes="(max-width:760px) calc(100vw - 48px), (max-width:960px) 46vw, 370px" width="1200" height="697" alt="Sitio web de Grupo KSI" loading="lazy">
         <div class="sitio-p"><div><b>Grupo KSI</b><span>Desarrolladora · 4 proyectos con mapas de disponibilidad</span></div><span class="flecha">↗</span></div>
       </a>
       <a class="sitio rev" href="https://constructora383.com" target="_blank" rel="noopener">
         <div class="barra"><i></i><i></i><i></i></div>
-        <img src="images/web/c383.jpg" alt="Sitio web de Constructora 383" loading="lazy">
+        <img src="images/web/c383-800.webp" srcset="images/web/c383-480.webp 480w, images/web/c383-800.webp 800w, images/web/c383.webp 1200w" sizes="(max-width:760px) calc(100vw - 48px), (max-width:960px) 46vw, 370px" width="1200" height="697" alt="Sitio web de Constructora 383" loading="lazy">
         <div class="sitio-p"><div><b>Constructora 383</b><span>Constructora · Don José María Park View</span></div><span class="flecha">↗</span></div>
       </a>
     </div>
@@ -468,17 +482,17 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
       <a class="ig" href="https://www.behance.net/mininnovationsdo" target="_blank" rel="noopener">Ver todo en Behance <span class="flecha">↗</span></a>
     </div>
     <div class="brand-g rev">
-      <a href="https://www.behance.net/gallery/236442357/Brita" target="_blank" rel="noopener"><img src="images/branding/brita.jpg" alt="Identidad de Brita" loading="lazy"><span>Brita</span></a>
-      <a href="https://www.behance.net/gallery/243152005/Santo-Matcha" target="_blank" rel="noopener"><img src="images/branding/santomatcha.jpg" alt="Identidad de Santo Matcha" loading="lazy"><span>Santo Matcha</span></a>
-      <a href="https://www.behance.net/gallery/236440707/Germosen-Films" target="_blank" rel="noopener"><img src="images/branding/germosen.jpg" alt="Rebranding de Germosen Films" loading="lazy"><span>Germosen Films</span></a>
-      <a href="https://www.behance.net/gallery/236440255/consentidas-nail-spa" target="_blank" rel="noopener"><img src="images/branding/consentidas.jpg" alt="Logo de Consentidas Nail Spa" loading="lazy"><span>Consentidas Nail Spa</span></a>
-      <a href="https://www.behance.net/gallery/238452333/Crossmart" target="_blank" rel="noopener"><img src="images/branding/crossmart.jpg" alt="Identidad de Crossmart" loading="lazy"><span>Crossmart</span></a>
-      <a href="https://www.behance.net/gallery/247122387/Natlia-Gomez-Lawyer" target="_blank" rel="noopener"><img src="images/branding/natalia.jpg" alt="Identidad de Natalia Gómez, abogada" loading="lazy"><span>Natalia Gómez</span></a>
+      <a href="https://www.behance.net/gallery/236442357/Brita" target="_blank" rel="noopener"><img src="images/branding/brita.webp" srcset="images/branding/brita-480.webp 480w, images/branding/brita.webp 900w" sizes="(max-width:760px) 46vw, 380px" width="900" height="507" alt="Identidad de Brita" loading="lazy"><span>Brita</span></a>
+      <a href="https://www.behance.net/gallery/243152005/Santo-Matcha" target="_blank" rel="noopener"><img src="images/branding/santomatcha.webp" srcset="images/branding/santomatcha-480.webp 480w, images/branding/santomatcha.webp 900w" sizes="(max-width:760px) 46vw, 380px" width="900" height="506" alt="Identidad de Santo Matcha" loading="lazy"><span>Santo Matcha</span></a>
+      <a href="https://www.behance.net/gallery/236440707/Germosen-Films" target="_blank" rel="noopener"><img src="images/branding/germosen.webp" srcset="images/branding/germosen-480.webp 480w, images/branding/germosen.webp 900w" sizes="(max-width:760px) 46vw, 380px" width="900" height="507" alt="Rebranding de Germosen Films" loading="lazy"><span>Germosen Films</span></a>
+      <a href="https://www.behance.net/gallery/236440255/consentidas-nail-spa" target="_blank" rel="noopener"><img src="images/branding/consentidas.webp" srcset="images/branding/consentidas-480.webp 480w, images/branding/consentidas.webp 900w" sizes="(max-width:760px) 46vw, 380px" width="900" height="507" alt="Logo de Consentidas Nail Spa" loading="lazy"><span>Consentidas Nail Spa</span></a>
+      <a href="https://www.behance.net/gallery/238452333/Crossmart" target="_blank" rel="noopener"><img src="images/branding/crossmart.webp" srcset="images/branding/crossmart-480.webp 480w, images/branding/crossmart.webp 890w" sizes="(max-width:760px) 46vw, 380px" width="890" height="500" alt="Identidad de Crossmart" loading="lazy"><span>Crossmart</span></a>
+      <a href="https://www.behance.net/gallery/247122387/Natlia-Gomez-Lawyer" target="_blank" rel="noopener"><img src="images/branding/natalia.webp" srcset="images/branding/natalia-480.webp 480w, images/branding/natalia.webp 900w" sizes="(max-width:760px) 46vw, 380px" width="900" height="507" alt="Identidad de Natalia Gómez, abogada" loading="lazy"><span>Natalia Gómez</span></a>
     </div>
     <div class="tambien rev">
       <span>También hemos trabajado con</span>
-      <a href="https://www.instagram.com/bodyfitnesscoachingcenter/" target="_blank" rel="noopener"><img src="images/clientes/bodyfitness.jpg" alt="" loading="lazy">Body Fitness Coaching Center</a>
-      <a href="https://www.instagram.com/centrodecosmiatriaavanzada/" target="_blank" rel="noopener"><img src="images/clientes/cosmiatria.jpg" alt="" loading="lazy">Centro de Cosmiatría Avanzada</a>
+      <a href="https://www.instagram.com/bodyfitnesscoachingcenter/" target="_blank" rel="noopener"><img src="images/clientes/bodyfitness-96.webp" width="48" height="48" alt="" loading="lazy">Body Fitness Coaching Center</a>
+      <a href="https://www.instagram.com/centrodecosmiatriaavanzada/" target="_blank" rel="noopener"><img src="images/clientes/cosmiatria-96.webp" width="48" height="48" alt="" loading="lazy">Centro de Cosmiatría Avanzada</a>
     </div>
   </div>
 </section>
@@ -490,8 +504,8 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
       <h2>Dos personas, <span class="serif">una mesa.</span></h2>
       <p>Hablas directo con quienes hacen el trabajo.</p>
     </div>
-    <div class="persona rev"><img src="images/jeremy-web.jpg" alt="Jeremy Gómez" loading="lazy"><b>Jeremy Gómez</b><span>Cofundador · Diseño y producción</span></div>
-    <div class="persona rev"><img src="images/briana-web.jpg" alt="Briana Avendaño" loading="lazy"><b>Briana Avendaño</b><span>Cofundadora · Estrategia y dirección creativa</span></div>
+    <div class="persona rev"><img src="images/jeremy-web.webp" srcset="images/jeremy-web-480.webp 480w, images/jeremy-web.webp 886w" sizes="(max-width:960px) 46vw, 360px" width="886" height="1200" alt="Jeremy Gómez" loading="lazy"><b>Jeremy Gómez</b><span>Cofundador · Diseño y producción</span></div>
+    <div class="persona rev"><img src="images/briana-web.webp" srcset="images/briana-web-480.webp 480w, images/briana-web.webp 849w" sizes="(max-width:960px) 46vw, 360px" width="849" height="1200" alt="Briana Avendaño" loading="lazy"><b>Briana Avendaño</b><span>Cofundadora · Estrategia y dirección creativa</span></div>
   </div>
 </section>
 
