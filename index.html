@@ -27,6 +27,7 @@
 <meta name="twitter:description" content="MIN Innovations (m. innovations) es una agencia de marketing digital en Santiago, República Dominicana. Redes sociales, video, páginas web y branding.">
 <meta name="twitter:image" content="https://mininnovations.com/images/og-logo.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://mininnovations.com/#website", "url": "https://mininnovations.com/", "name": "MIN Innovations", "alternateName": ["m. innovations", "min innovations", "m.innovations", "M Innovations", "mininnovations", "MIN Innovations Santiago"], "inLanguage": "es-DO", "publisher": {"@id": "https://mininnovations.com/#org"}}, {"@type": "ProfessionalService", "@id": "https://mininnovations.com/#org", "name": "MIN Innovations", "alternateName": ["m. innovations", "min innovations", "m.innovations", "M Innovations", "mininnovations", "MIN Innovations Santiago"], "url": "https://mininnovations.com/", "logo": "https://mininnovations.com/favicon-512.png", "image": "https://mininnovations.com/images/og-logo.jpg", "description": "MIN Innovations (m. innovations) es una agencia de marketing digital en Santiago, República Dominicana. Redes sociales, video, páginas web y branding.", "telephone": "+1-849-460-1912", "email": "mininnovationsdr@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Santiago de los Caballeros", "addressRegion": "Santiago", "addressCountry": "DO"}, "areaServed": [{"@type": "City", "name": "Santiago de los Caballeros"}, {"@type": "Country", "name": "República Dominicana"}], "serviceType": ["Manejo de redes sociales", "Producción de video", "Diseño de páginas web", "Branding e identidad visual", "Marketing digital"], "sameAs": ["https://www.instagram.com/mininnovations/", "https://www.behance.net/mininnovationsdo"], "potentialAction": {"@type": "ReserveAction", "name": "Agendar una llamada virtual", "target": {"@type": "EntryPoint", "urlTemplate": "https://calendar.app.google/TKrikrU4YgMFgNCTA", "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]}}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta trabajar con ustedes?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de lo que necesites. Tenemos planes mensuales de redes y proyectos cerrados (páginas web, branding y video). Escríbenos y te enviamos una propuesta con el alcance y el precio por escrito."}}, {"@type": "Question", "name": "¿Ustedes graban o solo diseñan?", "acceptedAnswer": {"@type": "Answer", "text": "Las dos cosas. Planificamos, escribimos los guiones, grabamos, editamos y diseñamos. Normalmente grabamos el contenido de todo el mes en un solo día."}}, {"@type": "Question", "name": "¿Trabajan con negocios fuera de Santiago?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Tenemos clientes en Santiago y en Puerto Plata, y trabajamos por videollamada con marcas de otras ciudades y de fuera del país."}}, {"@type": "Question", "name": "¿En cuánto tiempo se ven resultados?", "acceptedAnswer": {"@type": "Answer", "text": "El contenido empieza a trabajar desde el primer mes, pero una cuenta se construye con constancia. Cada mes medimos qué funcionó y ajustamos el plan."}}, {"@type": "Question", "name": "¿También manejan anuncios?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Creamos y manejamos campañas en Facebook e Instagram, y las conectamos con un sistema de citas y seguimiento para que ningún mensaje se quede sin respuesta."}}, {"@type": "Question", "name": "¿Dónde puedo ver su trabajo?", "acceptedAnswer": {"@type": "Answer", "text": "Aquí mismo: en «Contenido que trabaja» están las últimas publicaciones de las cuentas que manejamos, y se actualizan cada mes."}}]}</script>
 <link rel="preload" href="/fonts/poppins-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -229,6 +230,87 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
 .foot nav a{display:inline-block;padding:6px 0}
 .foot a:hover{color:var(--crema)}
 
+
+/* ── FEED EN VIVO ── */
+.vivo{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--negro);border:1px solid rgba(22,22,20,.16);border-radius:100px;padding:5px 12px 5px 10px}
+.vivo i{width:7px;height:7px;border-radius:50%;background:#2E9E5B;box-shadow:0 0 0 0 rgba(46,158,91,.5);animation:latido 2.2s ease-out infinite}
+@keyframes latido{to{box-shadow:0 0 0 9px rgba(46,158,91,0)}}
+.caso-seg{margin-top:10px;font-size:14px;color:var(--gris)}
+.caso-seg b{font-family:var(--display);font-weight:700;font-size:18px;color:var(--negro);letter-spacing:-.02em}
+.caso-seg em{font-style:normal;font-weight:600;color:#1E7A45;margin-left:6px}
+.tiles a{position:relative}
+.tiles .tipo{position:absolute;left:8px;top:8px;font-size:11px;font-weight:600;color:#fff;background:rgba(22,22,20,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:100px;padding:3px 9px;pointer-events:none}
+.js .caso.rev .tiles a{opacity:0;translate:0 26px;transition:opacity .6s ease,translate .7s cubic-bezier(.2,.7,.2,1),transform .35s cubic-bezier(.2,.7,.2,1)}
+.js .caso.rev.in .tiles a{opacity:1;translate:0 0}
+.js .caso.rev.in .tiles a:nth-child(2){transition-delay:.08s,.08s,0s}
+.js .caso.rev.in .tiles a:nth-child(3){transition-delay:.16s,.16s,0s}
+
+/* ── MÉTODO ── */
+.metodo{background:var(--negro);color:var(--crema)}
+.metodo .sec-head p{color:var(--arena)}
+.pasos{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;position:relative;padding-top:34px}
+.pasos::before,.pasos::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--linea)}
+.pasos::after{background:var(--terracota-claro);transform:scaleX(0);transform-origin:0 50%;transition:transform 1.6s cubic-bezier(.65,0,.35,1) .2s}
+.pasos.in::after,html:not(.js) .pasos::after{transform:none}
+.paso{position:relative}
+.paso::before{content:"";position:absolute;top:-40px;left:0;width:14px;height:14px;border-radius:50%;background:var(--negro);border:2px solid var(--terracota-claro)}
+.paso-n{font-family:var(--display);font-weight:600;font-size:13px;color:var(--terracota-claro);letter-spacing:.08em}
+.paso h3{font-size:clamp(22px,2.4vw,30px);margin:10px 0 10px}
+.paso p{color:var(--arena);font-size:15px}
+.js .pasos.rev{opacity:1;transform:none}
+.js .paso.rev:nth-child(2){transition-delay:.15s}.js .paso.rev:nth-child(3){transition-delay:.3s}.js .paso.rev:nth-child(4){transition-delay:.45s}
+
+.anatomia{margin-top:90px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:48px;align-items:center;border:1px solid var(--linea);border-radius:24px;padding:40px;background:var(--negro-2)}
+.anat-txt h3{font-size:clamp(28px,3.4vw,44px);margin:14px 0 12px}
+.anat-txt h3 .serif{color:var(--terracota-claro)}
+.anat-txt p{color:var(--arena)}
+.anat-barra{position:relative;display:flex;gap:4px;height:14px}
+.anat-barra span{flex:var(--d);border-radius:4px;background:rgba(242,237,230,.14);transition:background .3s}
+.anat-barra span.on{background:var(--terracota-claro)}
+.anat-cabezal{position:absolute;top:-6px;bottom:-6px;left:0;width:2px;background:var(--crema);border-radius:2px;box-shadow:0 0 12px rgba(242,237,230,.7)}
+.anatomia.in .anat-cabezal{animation:cabezal 9s linear infinite}
+@keyframes cabezal{to{left:100%}}
+.anat-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.anat-chips button{font:inherit;font-size:14px;font-weight:600;color:var(--crema);background:transparent;border:1px solid rgba(242,237,230,.28);border-radius:100px;padding:10px 16px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.anat-chips button:hover{border-color:var(--crema)}
+.anat-chips button[aria-selected="true"]{background:var(--crema);color:var(--negro);border-color:var(--crema)}
+.anat-chips button:focus-visible{outline:2px solid var(--terracota-claro);outline-offset:2px}
+.anat-panel{margin-top:22px;min-height:104px}
+.anat-t{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota-claro)}
+.anat-h{display:block;font-family:var(--display);font-weight:700;font-size:22px;margin:6px 0}
+.anat-p{color:var(--arena)}
+.anat-panel.cambio{animation:entra .4s ease}
+@keyframes entra{from{opacity:0;transform:translateY(8px);filter:blur(4px)}}
+
+/* ── SISTEMA ── */
+.sistema-b{background:var(--terracota-boton);color:#fff;padding:72px 0}
+.sistema-in{display:flex;align-items:center;justify-content:space-between;gap:28px 48px;flex-wrap:wrap}
+.sistema-b .chip{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.08)}
+.sistema-b .chip i{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.25)}
+.sistema-b h2{font-size:clamp(34px,5vw,60px);margin:18px 0 12px;color:#fff}
+.sistema-b h2 .serif{color:var(--crema)}
+.sistema-b p{max-width:520px;color:#fff}
+
+/* ── PREGUNTAS ── */
+.preg-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.preg-g h2{margin-top:16px}
+.faq{border-top:1px solid rgba(22,22,20,.14)}
+.faq:last-child{border-bottom:1px solid rgba(22,22,20,.14)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-family:var(--display);font-weight:600;font-size:clamp(17px,1.8vw,20px)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--texto);font-weight:400;font-size:26px;line-height:1;color:var(--terracota-texto);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid var(--terracota-texto);outline-offset:4px;border-radius:6px}
+.faq p{color:var(--gris);padding:0 40px 22px 0;max-width:620px}
+.faq[open] p{animation:entra .35s ease}
+
+/* ── BARRA DE PROGRESO ── */
+.progreso{display:none}
+@supports (animation-timeline:scroll()){
+  .progreso{display:block;position:fixed;top:0;left:0;right:0;height:3px;z-index:60;background:var(--terracota-claro);transform-origin:0 50%;transform:scaleX(0);animation:progreso linear both;animation-timeline:scroll(root)}
+  @keyframes progreso{to{transform:scaleX(1)}}
+}
+
 /* ── APARICIÓN ── */
 .js .rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .js .rev.in{opacity:1;transform:none}
@@ -240,6 +322,11 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
   .equipo-g>div:first-child{grid-column:1/-1}
   .equipo-g{align-items:start}
   .contacto-g{grid-template-columns:1fr}
+  .pasos{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:56px}
+  .pasos::before,.pasos::after{display:none}
+  .paso::before{top:-26px}
+  .anatomia{grid-template-columns:1fr;gap:28px}
+  .preg-g{grid-template-columns:1fr;gap:28px}
 }
 @media (max-width:760px){
   section{padding:76px 0}
@@ -260,17 +347,26 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
   .serv p{grid-column:2}
   .brand-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   form{padding:20px}
+  .pasos{grid-template-columns:1fr;row-gap:44px}
+  .anatomia{padding:24px;margin-top:64px}
+  .sistema-b{padding:56px 0}
+  .faq p{padding-right:0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .marquee{overflow-x:auto}
   .marquee-track{animation:none}
   .js .rev{opacity:1;transform:none;transition:none}
+  .js .caso.rev .tiles a{opacity:1;translate:0 0;transition:none}
+  .pasos::after{transform:none;transition:none}
+  .anatomia.in .anat-cabezal,.vivo i,.anat-panel.cambio,.faq[open] p{animation:none}
+  .progreso{display:none}
 }
 </style>
 </head>
 <body>
 
+<div class="progreso" aria-hidden="true"></div>
 <header class="nav">
   <div class="nav-in">
     <a href="#inicio" class="nav-logo" aria-label="m. innovations, inicio"><img src="images/logo-m.png" alt="m. innovations" width="426" height="289"></a>
@@ -278,6 +374,7 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
       <li><a href="#trabajo">Trabajo</a></li>
       <li><a href="#web">Web</a></li>
       <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#metodo">Método</a></li>
       <li><a href="#equipo">Equipo</a></li>
     </ul>
     <a href="#contacto" class="btn btn-terra">Hablemos</a>
@@ -303,13 +400,14 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
     <p class="clientes-t">Marcas que trabajan con nosotros hoy</p>
     <div class="marquee" id="marquee">
       <div class="marquee-track">
-        <div class="marquee-set">
+        <div class="marquee-set"><!-- FEED:CINTA -->
           <a class="cliente" href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/clientes/tanya-96.webp" width="48" height="48" alt=""><div><b>Tanya Gómez · Mr. Home</b><span>@tanya.mrhome</span></div></a>
           <a class="cliente" href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/clientes/alfonsina-96.webp" width="48" height="48" alt=""><div><b>Dra. Alfonsina Cruz</b><span>@dra.alfonsinacruz</span></div></a>
           <a class="cliente" href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/clientes/cookies-96.webp" width="48" height="48" alt=""><div><b>Los Cookies by Arlina</b><span>@loscookiesbyarlina</span></div></a>
           <a class="cliente" href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/clientes/laura-96.webp" width="48" height="48" alt=""><div><b>Laura Lizardo</b><span>@psilauralizardov</span></div></a>
-          <a class="cliente" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/clientes/duke-96.webp" width="48" height="48" alt=""><div><b>Duke Fresh Haircuts</b><span>@dukefreshhaircuts</span></div></a>
           <a class="cliente" href="https://www.instagram.com/grupoksird/" target="_blank" rel="noopener"><img src="images/clientes/ksi-96.webp" width="48" height="48" alt=""><div><b>Grupo KSI</b><span>@grupoksird</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/clientes/duke-96.webp" width="48" height="48" alt=""><div><b>Duke Fresh Haircuts</b><span>@dukefreshhaircuts</span></div></a>
+          <!-- /FEED:CINTA -->
         </div>
       </div>
     </div>
@@ -318,9 +416,9 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
 
 <div class="cifras">
   <div class="wrap cifras-g">
-    <div class="cifra"><b>6</b><span>Marcas activas</span></div>
-    <div class="cifra"><b>8</b><span>Industrias</span></div>
-    <div class="cifra"><b>6</b><span>Sitios web publicados</span></div>
+    <div class="cifra"><b data-contar>6</b><span>Marcas activas</span></div>
+    <div class="cifra"><b data-contar><!-- FEED:SEGUIDORES -->70K+<!-- /FEED:SEGUIDORES --></b><span>Seguidores en las cuentas que manejamos</span></div>
+    <div class="cifra"><b data-contar>6</b><span>Sitios web publicados</span></div>
     <div class="cifra"><b>2024</b><span>Año de fundación</span></div>
   </div>
 </div>
@@ -332,21 +430,24 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="eyebrow">Redes sociales</span>
         <h2>Contenido que <span class="serif">trabaja.</span></h2>
       </div>
-      <p>Estrategia, grabación, edición y diseño para las marcas que manejamos.</p>
+      <p>Estrategia, grabación, edición y diseño para las marcas que manejamos. <span class="vivo"><i></i>Últimas publicaciones · <!-- FEED:FECHA -->noviembre 2026<!-- /FEED:FECHA --></span></p>
     </div>
+
+    <!-- FEED:CASOS -->
 
     <article class="caso rev">
       <div>
         <span class="caso-n">01</span>
         <h3>Tanya Gómez · Mr. Home</h3>
         <p class="caso-s">Bienes raíces · Zona norte, RD</p>
+        <p class="caso-seg"><b>845</b> seguidores</p>
         <div class="tags"><span>Estrategia</span><span>Reels</span><span>Diseño</span></div>
         <a class="ig" href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener">@tanya.mrhome <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-1.webp" srcset="images/trabajo/tanya-1-240.webp 240w, images/trabajo/tanya-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel de Tanya Gómez en Expocibao 2026" loading="lazy"></a>
-        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-2.webp" srcset="images/trabajo/tanya-2-240.webp 240w, images/trabajo/tanya-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Carrusel: ¿Qué tipo de comprador eres?" loading="lazy"></a>
-        <a href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener"><img src="images/trabajo/tanya-3.webp" srcset="images/trabajo/tanya-3-240.webp 240w, images/trabajo/tanya-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel del proyecto XVS en Santiago" loading="lazy"></a>
+        <a href="https://www.instagram.com/tanya.mrhome/p/DfnEzCEDJiK/" target="_blank" rel="noopener"><img src="images/feed/tanya-1.webp" srcset="images/feed/tanya-1-300.webp 300w, images/feed/tanya-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Tu apartamento no necesita más metros, necesita mejores decisiones." loading="lazy"><span class="tipo">Carrusel</span></a>
+        <a href="https://www.instagram.com/tanya.mrhome/p/DfZuJYVyl1z/" target="_blank" rel="noopener"><img src="images/feed/tanya-2.webp" srcset="images/feed/tanya-2-300.webp 300w, images/feed/tanya-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: always believe that something magical is about to happen" loading="lazy"><span class="tipo">Post</span></a>
+        <a href="https://www.instagram.com/tanya.mrhome/reel/DfIIO19yXu2/" target="_blank" rel="noopener"><img src="images/feed/tanya-3.webp" srcset="images/feed/tanya-3-300.webp 300w, images/feed/tanya-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: 5 años pasan rápido." loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
 
@@ -355,13 +456,14 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">02</span>
         <h3>Dra. Alfonsina Cruz</h3>
         <p class="caso-s">Odontopediatría · Puerto Plata</p>
+        <p class="caso-seg"><b>515</b> seguidores</p>
         <div class="tags"><span>Redes</span><span>Grabación</span><span>Sitio web</span></div>
         <a class="ig" href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener">@dra.alfonsinacruz <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-1.webp" srcset="images/trabajo/alfonsina-1-240.webp 240w, images/trabajo/alfonsina-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Las caries no aparecen de un día para otro" loading="lazy"></a>
-        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-2.webp" srcset="images/trabajo/alfonsina-2-240.webp 240w, images/trabajo/alfonsina-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: ¿Cuánta pasta dental necesita tu hijo?" loading="lazy"></a>
-        <a href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener"><img src="images/trabajo/alfonsina-3.webp" srcset="images/trabajo/alfonsina-3-240.webp 240w, images/trabajo/alfonsina-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Carrusel: Una nueva etapa" loading="lazy"></a>
+        <a href="https://www.instagram.com/dra.alfonsinacruz/reel/DehddEOJhT2/" target="_blank" rel="noopener"><img src="images/feed/alfonsina-1.webp" srcset="images/feed/alfonsina-1-300.webp 300w, images/feed/alfonsina-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Cada niño merece una atención que respete su ritmo, sus necesidades y su forma única de descubrir el mundo." loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/dra.alfonsinacruz/p/DeUhdRGpsXN/" target="_blank" rel="noopener"><img src="images/feed/alfonsina-2.webp" srcset="images/feed/alfonsina-2-300.webp 300w, images/feed/alfonsina-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: ¿Sabías que no solo los dulces pueden favorecer la aparición de caries?" loading="lazy"><span class="tipo">Post</span></a>
+        <a href="https://www.instagram.com/dra.alfonsinacruz/reel/DeIO7klh1Mu/" target="_blank" rel="noopener"><img src="images/feed/alfonsina-3.webp" srcset="images/feed/alfonsina-3-300.webp 300w, images/feed/alfonsina-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Spoiler: Las caries no llegan de la noche a la mañana pero sí puede ir haciendo de las suyas poquito a…" loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
 
@@ -370,13 +472,14 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">03</span>
         <h3>Los Cookies by Arlina</h3>
         <p class="caso-s">Pastelería boutique · Santiago</p>
+        <p class="caso-seg"><b>44.7 mil</b> seguidores</p>
         <div class="tags"><span>Redes</span><span>Diseño</span><span>Video</span></div>
         <a class="ig" href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener">@loscookiesbyarlina <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-1.webp" srcset="images/trabajo/cookies-1-240.webp 240w, images/trabajo/cookies-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Diseño: Fondant o suspiro para tu pastel de bodas" loading="lazy"></a>
-        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-2.webp" srcset="images/trabajo/cookies-2-240.webp 240w, images/trabajo/cookies-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Arlina junto a un pastel de bodas" loading="lazy"></a>
-        <a href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/trabajo/cookies-3.webp" srcset="images/trabajo/cookies-3-240.webp 240w, images/trabajo/cookies-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Me voy de gira" loading="lazy"></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/reel/DfcIgaPhbMy/" target="_blank" rel="noopener"><img src="images/feed/cookies-1.webp" srcset="images/feed/cookies-1-300.webp 300w, images/feed/cookies-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: ¡El otoño sabe a auyama!" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/reel/DfVey51iRRY/" target="_blank" rel="noopener"><img src="images/feed/cookies-2.webp" srcset="images/feed/cookies-2-300.webp 300w, images/feed/cookies-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Gracias a cada persona que nos acompañó, nos apoyó y formó parte de este comienzo." loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/p/DfQVGo4mdtJ/" target="_blank" rel="noopener"><img src="images/feed/cookies-3.webp" srcset="images/feed/cookies-3-300.webp 300w, images/feed/cookies-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Un día que quedará guardado en nuestro corazón." loading="lazy"><span class="tipo">Carrusel</span></a>
       </div>
     </article>
 
@@ -385,30 +488,49 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">04</span>
         <h3>Laura Lizardo</h3>
         <p class="caso-s">Psicóloga · Marca personal</p>
+        <p class="caso-seg"><b>19.8 mil</b> seguidores</p>
         <div class="tags"><span>Edición de video</span><span>Contenido</span></div>
         <a class="ig" href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener">@psilauralizardov <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-1.webp" srcset="images/trabajo/laura-1-240.webp 240w, images/trabajo/laura-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: ¿Quién estoy siendo en mi relación?" loading="lazy"></a>
-        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-2.webp" srcset="images/trabajo/laura-2-240.webp 240w, images/trabajo/laura-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Quizás no vas tarde, solo te estás comparando" loading="lazy"></a>
-        <a href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/trabajo/laura-3.webp" srcset="images/trabajo/laura-3-240.webp 240w, images/trabajo/laura-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: Me niego a tener un solo nicho" loading="lazy"></a>
+        <a href="https://www.instagram.com/psilauralizardov/reel/Dfm60UczkCA/" target="_blank" rel="noopener"><img src="images/feed/laura-1.webp" srcset="images/feed/laura-1-300.webp 300w, images/feed/laura-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Entre innings, errores y home runs, hay algo que también aplica para el amor: No confundamos intensidad…" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/psilauralizardov/reel/DfYIz6zzOiZ/" target="_blank" rel="noopener"><img src="images/feed/laura-2.webp" srcset="images/feed/laura-2-300.webp 300w, images/feed/laura-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: un grwm un poquito caótico (con llanto de por medio y todo), pero lo logramos Acompáñenme a prepararme…" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/psilauralizardov/reel/DfU2JofzK_C/" target="_blank" rel="noopener"><img src="images/feed/laura-3.webp" srcset="images/feed/laura-3-300.webp 300w, images/feed/laura-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Si estás viviendo una situación similar, quiero que recuerdes algo: no tienes que esperar a que vuelva a…" loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
 
     <article class="caso rev">
       <div>
         <span class="caso-n">05</span>
+        <h3>Grupo KSI</h3>
+        <p class="caso-s">Constructora · Hacienda Gurabo y El Doral</p>
+        <p class="caso-seg"><b>2,936</b> seguidores</p>
+        <div class="tags"><span>Redes</span><span>Leads</span><span>Sitio web</span></div>
+        <a class="ig" href="https://www.instagram.com/grupoksird/" target="_blank" rel="noopener">@grupoksird <span class="flecha">↗</span></a>
+      </div>
+      <div class="tiles">
+        <a href="https://www.instagram.com/grupoksird/p/DfmtH9Ajnog/" target="_blank" rel="noopener"><img src="images/feed/ksi-1.webp" srcset="images/feed/ksi-1-300.webp 300w, images/feed/ksi-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: Invierte hoy en lo que mañana será parte de tu patrimonio." loading="lazy"><span class="tipo">Post</span></a>
+        <a href="https://www.instagram.com/grupoksird/reel/DfkRynJtedy/" target="_blank" rel="noopener"><img src="images/feed/ksi-2.webp" srcset="images/feed/ksi-2-300.webp 300w, images/feed/ksi-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Antes de imaginar la casa, imagina tus días aquí La montaña, el verde y Santiago en el horizonte." loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/grupoksird/p/DfatLjjt2Qw/" target="_blank" rel="noopener"><img src="images/feed/ksi-3.webp" srcset="images/feed/ksi-3-300.webp 300w, images/feed/ksi-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: ¡Nos mudamos para seguir creciendo contigo!" loading="lazy"><span class="tipo">Post</span></a>
+      </div>
+    </article>
+
+    <article class="caso rev">
+      <div>
+        <span class="caso-n">06</span>
         <h3>Duke Fresh Haircuts</h3>
         <p class="caso-s">Barbería · Santiago</p>
+        <p class="caso-seg"><b>1,820</b> seguidores</p>
         <div class="tags"><span>Redes</span><span>Reels</span></div>
         <a class="ig" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener">@dukefreshhaircuts <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-1.webp" srcset="images/trabajo/duke-1-240.webp 240w, images/trabajo/duke-1.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel: POV, pague su chisme" loading="lazy"></a>
-        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-2.webp" srcset="images/trabajo/duke-2-240.webp 240w, images/trabajo/duke-2.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel dentro de la barbería" loading="lazy"></a>
-        <a href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/trabajo/duke-3.webp" srcset="images/trabajo/duke-3-240.webp 240w, images/trabajo/duke-3.webp 459w" sizes="(max-width:760px) 30vw, 220px" width="459" height="612" alt="Reel con consejo para barberos" loading="lazy"></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/reel/DflFxYzuFMF/" target="_blank" rel="noopener"><img src="images/feed/duke-1.webp" srcset="images/feed/duke-1-300.webp 300w, images/feed/duke-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Aquí el recorte viene con su coro incluido ¿Ya te toca pasar por dukefreshhaircuts ?" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/reel/DdhuIJ6M7QK/" target="_blank" rel="noopener"><img src="images/feed/duke-2.webp" srcset="images/feed/duke-2-300.webp 300w, images/feed/duke-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Sin chisme no se pueden pelar, pero tiene un costo especial ¿Cuánto tu pagarías?" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/reel/Dbtw4LQMXGi/" target="_blank" rel="noopener"><img src="images/feed/duke-3.webp" srcset="images/feed/duke-3-300.webp 300w, images/feed/duke-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: ¡Habla claro, patrón!" loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
+    <!-- /FEED:CASOS -->
   </div>
 </section>
 
@@ -472,6 +594,7 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
   </div>
 </section>
 
+
 <section class="branding" id="branding">
   <div class="wrap">
     <div class="sec-head rev">
@@ -497,6 +620,57 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
   </div>
 </section>
 
+<section class="metodo" id="metodo">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div>
+        <span class="eyebrow">Método</span>
+        <h2>Así trabajamos, <span class="serif">mes a mes.</span></h2>
+      </div>
+      <p>Nada de publicar por publicar. Cada mes sigue los mismos cuatro pasos.</p>
+    </div>
+    <ol class="pasos rev">
+      <li class="paso rev"><span class="paso-n">01</span><h3>Diagnóstico</h3><p>Revisamos tu cuenta y la de tu competencia: qué funciona, qué no y por qué.</p></li>
+      <li class="paso rev"><span class="paso-n">02</span><h3>Plan del mes</h3><p>Ideas filtradas y guiones palabra por palabra, listos para grabar.</p></li>
+      <li class="paso rev"><span class="paso-n">03</span><h3>Un día de grabación</h3><p>Grabamos el contenido del mes en una sola jornada. El resto del mes tú atiendes tu negocio.</p></li>
+      <li class="paso rev"><span class="paso-n">04</span><h3>Publicar y medir</h3><p>Publicamos, medimos y ajustamos. Lo que funciona se repite; lo que no, se cambia.</p></li>
+    </ol>
+
+    <div class="anatomia rev" id="anatomia">
+      <div class="anat-txt">
+        <span class="eyebrow">Anatomía de un reel</span>
+        <h3>35 segundos, <span class="serif">seis piezas.</span></h3>
+        <p>Así armamos cada guion para que la gente se quede hasta el final y comente. Toca cada parte.</p>
+      </div>
+      <div class="anat-vista">
+        <div class="anat-barra" aria-hidden="true"><span style="--d:3"></span><span style="--d:3"></span><span style="--d:11"></span><span style="--d:3"></span><span style="--d:12"></span><span style="--d:4"></span><i class="anat-cabezal"></i></div>
+        <div class="anat-chips" role="tablist" aria-label="Partes de un reel">
+          <button role="tab" aria-selected="true" aria-controls="anat-panel" style="--d:3" data-t="0–3 s" data-h="Gancho" data-p="Lo primero que se ve y se oye. Una frase que rompe lo esperado y obliga a quedarse.">Gancho</button>
+          <button role="tab" aria-selected="false" aria-controls="anat-panel" style="--d:3" data-t="3–6 s" data-h="Promesa" data-p="Le dices a la persona qué se lleva si se queda. Sin promesa, no hay razón para seguir.">Promesa</button>
+          <button role="tab" aria-selected="false" aria-controls="anat-panel" style="--d:11" data-t="6–17 s" data-h="Cuerpo" data-p="El contenido de verdad: el consejo, la historia o el recorrido, en frases cortas.">Cuerpo</button>
+          <button role="tab" aria-selected="false" aria-controls="anat-panel" style="--d:3" data-t="17–20 s" data-h="Bucle abierto" data-p="«Y lo más importante viene al final…». Abre una pregunta para que nadie se vaya a la mitad.">Bucle</button>
+          <button role="tab" aria-selected="false" aria-controls="anat-panel" style="--d:12" data-t="20–32 s" data-h="Entrega" data-p="Se cierra la pregunta y se entrega lo que se prometió, con el dato o el resultado más fuerte.">Entrega</button>
+          <button role="tab" aria-selected="false" aria-controls="anat-panel" style="--d:4" data-t="32–36 s" data-h="Llamado" data-p="Una sola acción clara: «Comenta la palabra X y te lo envío». Así el reel trae conversaciones, no solo vistas.">Llamado</button>
+        </div>
+        <div class="anat-panel" id="anat-panel" role="tabpanel" aria-live="polite">
+          <span class="anat-t">0–3 s</span><b class="anat-h">Gancho</b><p class="anat-p">Lo primero que se ve y se oye. Una frase que rompe lo esperado y obliga a quedarse.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sistema-b">
+  <div class="wrap sistema-in rev">
+    <div>
+      <span class="chip"><i></i>Nuevo</span>
+      <h2>Del anuncio <span class="serif">a la cita.</span></h2>
+      <p>Anuncios en Meta, citas que se agendan solas y un sistema para que ningún cliente se quede sin respuesta.</p>
+    </div>
+    <a href="/sistema/" class="btn btn-claro">Ver cómo funciona <span class="flecha">↗</span></a>
+  </div>
+</section>
+
 <section class="equipo" id="equipo">
   <div class="wrap equipo-g">
     <div class="rev">
@@ -506,6 +680,23 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
     </div>
     <div class="persona rev"><img src="images/jeremy-web.webp" srcset="images/jeremy-web-480.webp 480w, images/jeremy-web.webp 886w" sizes="(max-width:960px) 46vw, 360px" width="886" height="1200" alt="Jeremy Gómez" loading="lazy"><b>Jeremy Gómez</b><span>Cofundador · Diseño y producción</span></div>
     <div class="persona rev"><img src="images/briana-web.webp" srcset="images/briana-web-480.webp 480w, images/briana-web.webp 849w" sizes="(max-width:960px) 46vw, 360px" width="849" height="1200" alt="Briana Avendaño" loading="lazy"><b>Briana Avendaño</b><span>Cofundadora · Estrategia y dirección creativa</span></div>
+  </div>
+</section>
+
+<section class="preguntas" id="preguntas">
+  <div class="wrap preg-g">
+    <div class="rev">
+      <span class="eyebrow">Preguntas</span>
+      <h2>Lo que nos <span class="serif">preguntan.</span></h2>
+    </div>
+    <div>
+      <details class="faq rev"><summary>¿Cuánto cuesta trabajar con ustedes?</summary><p>Depende de lo que necesites. Tenemos planes mensuales de redes y proyectos cerrados (páginas web, branding y video). Escríbenos y te enviamos una propuesta con el alcance y el precio por escrito.</p></details>
+      <details class="faq rev"><summary>¿Ustedes graban o solo diseñan?</summary><p>Las dos cosas. Planificamos, escribimos los guiones, grabamos, editamos y diseñamos. Normalmente grabamos el contenido de todo el mes en un solo día.</p></details>
+      <details class="faq rev"><summary>¿Trabajan con negocios fuera de Santiago?</summary><p>Sí. Tenemos clientes en Santiago y en Puerto Plata, y trabajamos por videollamada con marcas de otras ciudades y de fuera del país.</p></details>
+      <details class="faq rev"><summary>¿En cuánto tiempo se ven resultados?</summary><p>El contenido empieza a trabajar desde el primer mes, pero una cuenta se construye con constancia. Cada mes medimos qué funcionó y ajustamos el plan.</p></details>
+      <details class="faq rev"><summary>¿También manejan anuncios?</summary><p>Sí. Creamos y manejamos campañas en Facebook e Instagram, y las conectamos con un sistema de citas y seguimiento para que ningún mensaje se quede sin respuesta.</p></details>
+      <details class="faq rev"><summary>¿Dónde puedo ver su trabajo?</summary><p>Aquí mismo: en «Contenido que trabaja» están las últimas publicaciones de las cuentas que manejamos, y se actualizan cada mes.</p></details>
+    </div>
   </div>
 </section>
 
@@ -607,6 +798,41 @@ document.getElementById('form').addEventListener('submit',function(e){
   if(f.mensaje.value.trim())t+=' '+f.mensaje.value.trim();
   window.open('https://wa.me/18494601912?text='+encodeURIComponent(t),'_blank','noopener');
 });
+
+/* Cifras: cuentan desde cero al aparecer */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  var els=document.querySelectorAll('[data-contar]');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;io.unobserve(e.target);
+    var el=e.target,txt=el.textContent.trim(),m=txt.match(/^(\d+)(.*)$/);if(!m)return;
+    var fin=+m[1],suf=m[2],t0=null;
+    function paso(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1200),v=Math.round(fin*(1-Math.pow(1-k,3)));el.textContent=v+suf;if(k<1)requestAnimationFrame(paso);}
+    requestAnimationFrame(paso);
+  });},{threshold:.6});
+  els.forEach(function(e){io.observe(e);});
+})();
+
+/* Anatomía de un reel: pestañas y barra */
+(function(){
+  var caja=document.getElementById('anatomia');if(!caja)return;
+  var bts=caja.querySelectorAll('.anat-chips button'),segs=caja.querySelectorAll('.anat-barra span'),panel=caja.querySelector('.anat-panel');
+  function elegir(i,foco){
+    bts.forEach(function(b,k){b.setAttribute('aria-selected',k===i?'true':'false');b.tabIndex=k===i?0:-1;segs[k].classList.toggle('on',k===i);});
+    var b=bts[i];panel.querySelector('.anat-t').textContent=b.dataset.t;panel.querySelector('.anat-h').textContent=b.dataset.h;panel.querySelector('.anat-p').textContent=b.dataset.p;
+    panel.setAttribute('aria-labelledby',b.id);panel.classList.remove('cambio');void panel.offsetWidth;panel.classList.add('cambio');
+    if(foco)b.focus();
+  }
+  bts.forEach(function(b,i){
+    b.id='anat-tab-'+i;
+    b.addEventListener('click',function(){elegir(i);});
+    b.addEventListener('keydown',function(e){var n=bts.length;
+      if(e.key==='ArrowRight'){e.preventDefault();elegir((i+1)%n,true);}
+      if(e.key==='ArrowLeft'){e.preventDefault();elegir((i-1+n)%n,true);}});
+  });
+  panel.setAttribute('aria-labelledby','anat-tab-0');
+  elegir(0);
+})();
 </script>
 </body>
 </html>
