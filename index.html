@@ -362,6 +362,74 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
   .anatomia.in .anat-cabezal,.vivo i,.anat-panel.cambio,.faq[open] p{animation:none}
   .progreso{display:none}
 }
+
+/* ── GLASS ── */
+:root{--vidrio-borde:rgba(242,237,230,.2);--vidrio-brillo:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(255,255,255,.04);--vidrio-sombra:0 24px 60px rgba(0,0,0,.3)}
+.nav-in{background:rgba(22,22,20,.7);backdrop-filter:blur(24px) saturate(1.7);-webkit-backdrop-filter:blur(24px) saturate(1.7);border-color:var(--vidrio-borde);box-shadow:var(--vidrio-brillo),0 12px 34px rgba(0,0,0,.28)}
+.nav-links a{opacity:.92}
+.hero .chip,.hero .btn-linea{background:rgba(242,237,230,.08);backdrop-filter:blur(12px) saturate(1.4);-webkit-backdrop-filter:blur(12px) saturate(1.4);border-color:var(--vidrio-borde);box-shadow:var(--vidrio-brillo)}
+.hero .btn-linea:hover{background:rgba(242,237,230,.16);border-color:rgba(242,237,230,.5)}
+.clientes{background:rgba(242,237,230,.04);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-top-color:var(--vidrio-borde);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.cliente{background:linear-gradient(135deg,rgba(242,237,230,.17),rgba(242,237,230,.045));border-color:var(--vidrio-borde);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.cliente:hover{background:linear-gradient(135deg,rgba(242,237,230,.26),rgba(242,237,230,.09));border-color:rgba(242,237,230,.45)}
+
+#trabajo{background:
+  radial-gradient(520px 460px at 62% 9%,rgba(208,122,96,.62),transparent 72%),
+  radial-gradient(480px 460px at 90% 25%,rgba(143,175,143,.5),transparent 72%),
+  radial-gradient(560px 480px at 72% 44%,rgba(181,97,74,.5),transparent 72%),
+  radial-gradient(500px 460px at 14% 58%,rgba(207,193,172,.8),transparent 72%),
+  radial-gradient(540px 480px at 80% 72%,rgba(208,122,96,.56),transparent 72%),
+  radial-gradient(480px 440px at 58% 93%,rgba(143,175,143,.42),transparent 72%),
+  var(--crema)}
+#trabajo .vivo{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.9);box-shadow:inset 0 1px 0 #fff}
+.caso,.caso:last-child{border:1px solid rgba(255,255,255,.88);border-radius:30px;padding:40px 38px;margin-bottom:22px;background:linear-gradient(120deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.56) 42%,rgba(255,255,255,.2) 100%);backdrop-filter:blur(26px) saturate(1.45);-webkit-backdrop-filter:blur(26px) saturate(1.45);box-shadow:inset 0 1px 0 #fff,0 22px 54px rgba(92,48,34,.12)}
+.caso:last-child{margin-bottom:0}
+.caso-s,.caso-seg{color:#4C4640}
+.caso-n{color:#7F3F2F}
+.tags span{background:rgba(255,255,255,.5);border-color:rgba(22,22,20,.14)}
+.tiles a{box-shadow:0 12px 26px rgba(60,32,22,.18)}
+.tiles .tipo{background:rgba(22,22,20,.58);backdrop-filter:blur(10px) saturate(1.4);-webkit-backdrop-filter:blur(10px) saturate(1.4);border:1px solid rgba(255,255,255,.28)}
+
+.web{background:
+  radial-gradient(640px 520px at 10% 16%,rgba(181,97,74,.42),transparent 70%),
+  radial-gradient(680px 580px at 92% 84%,rgba(208,122,96,.3),transparent 70%),
+  var(--negro)}
+.sitio{background:rgba(242,237,230,.065);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border-color:var(--vidrio-borde);box-shadow:var(--vidrio-brillo),var(--vidrio-sombra)}
+a.sitio:hover{border-color:rgba(242,237,230,.5)}
+.brand-g span{background:rgba(22,22,20,.62);backdrop-filter:blur(10px) saturate(1.4);-webkit-backdrop-filter:blur(10px) saturate(1.4);border:1px solid rgba(255,255,255,.24)}
+
+.metodo{background:
+  radial-gradient(620px 520px at 88% 62%,rgba(181,97,74,.46),transparent 70%),
+  radial-gradient(520px 460px at 8% 92%,rgba(143,175,143,.16),transparent 70%),
+  var(--negro)}
+.anatomia{background:rgba(242,237,230,.07);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-color:var(--vidrio-borde);box-shadow:var(--vidrio-brillo),var(--vidrio-sombra)}
+.sistema-b .chip{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+form{background:rgba(242,237,230,.07);backdrop-filter:blur(24px) saturate(1.4);-webkit-backdrop-filter:blur(24px) saturate(1.4);border-color:var(--vidrio-borde);box-shadow:var(--vidrio-brillo),var(--vidrio-sombra)}
+input,select,textarea{background:rgba(242,237,230,.08);border-color:var(--vidrio-borde)}
+
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .caso,.caso:last-child{background:rgba(255,255,255,.86)}
+  .nav-in{background:rgba(22,22,20,.92)}
+  .sitio,.anatomia,form{background:var(--negro-2)}
+}
+@media (prefers-reduced-transparency:reduce){
+  .nav-in,.clientes,.caso,.caso:last-child,.sitio,.anatomia,form,.tiles .tipo,.brand-g span,.hero .chip,.hero .btn-linea{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .nav-in{background:var(--negro)}
+  .caso,.caso:last-child{background:#fff}
+  .sitio,.anatomia,form{background:var(--negro-2)}
+}
+@media (max-width:760px){
+  .caso,.caso:last-child{padding:26px 20px 24px;border-radius:22px;margin-bottom:14px;gap:26px;backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3)}
+  .caso:last-child{margin-bottom:0}
+  #trabajo{background:
+    radial-gradient(320px 300px at 85% 9%,rgba(208,122,96,.5),transparent 72%),
+    radial-gradient(320px 300px at 10% 30%,rgba(143,175,143,.34),transparent 72%),
+    radial-gradient(340px 320px at 90% 52%,rgba(181,97,74,.42),transparent 72%),
+    radial-gradient(320px 300px at 8% 74%,rgba(208,122,96,.38),transparent 72%),
+    radial-gradient(320px 300px at 90% 94%,rgba(143,175,143,.32),transparent 72%),
+    var(--crema)}
+  .caso,.caso:last-child{background:linear-gradient(150deg,rgba(255,255,255,.74),rgba(255,255,255,.46))}
+}
 </style>
 </head>
 <body>
@@ -406,6 +474,7 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
           <a class="cliente" href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener"><img src="images/clientes/cookies-96.webp" width="48" height="48" alt=""><div><b>Los Cookies by Arlina</b><span>@loscookiesbyarlina</span></div></a>
           <a class="cliente" href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener"><img src="images/clientes/laura-96.webp" width="48" height="48" alt=""><div><b>Laura Lizardo</b><span>@psilauralizardov</span></div></a>
           <a class="cliente" href="https://www.instagram.com/grupoksird/" target="_blank" rel="noopener"><img src="images/clientes/ksi-96.webp" width="48" height="48" alt=""><div><b>Grupo KSI</b><span>@grupoksird</span></div></a>
+          <a class="cliente" href="https://www.instagram.com/constructora_383/" target="_blank" rel="noopener"><img src="images/clientes/c383-96.webp" width="48" height="48" alt=""><div><b>Constructora 383</b><span>@constructora_383</span></div></a>
           <a class="cliente" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener"><img src="images/clientes/duke-96.webp" width="48" height="48" alt=""><div><b>Duke Fresh Haircuts</b><span>@dukefreshhaircuts</span></div></a>
           <!-- /FEED:CINTA -->
         </div>
@@ -416,7 +485,7 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
 
 <div class="cifras">
   <div class="wrap cifras-g">
-    <div class="cifra"><b data-contar>6</b><span>Marcas activas</span></div>
+    <div class="cifra"><b data-contar>7</b><span>Marcas activas</span></div>
     <div class="cifra"><b data-contar><!-- FEED:SEGUIDORES -->70K+<!-- /FEED:SEGUIDORES --></b><span>Seguidores en las cuentas que manejamos</span></div>
     <div class="cifra"><b data-contar>6</b><span>Sitios web publicados</span></div>
     <div class="cifra"><b>2024</b><span>Año de fundación</span></div>
@@ -440,14 +509,14 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">01</span>
         <h3>Tanya Gómez · Mr. Home</h3>
         <p class="caso-s">Bienes raíces · Zona norte, RD</p>
-        <p class="caso-seg"><b>845</b> seguidores</p>
+        <p class="caso-seg"><b>910</b> seguidores</p>
         <div class="tags"><span>Estrategia</span><span>Reels</span><span>Diseño</span></div>
         <a class="ig" href="https://www.instagram.com/tanya.mrhome/" target="_blank" rel="noopener">@tanya.mrhome <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/tanya.mrhome/p/DfnEzCEDJiK/" target="_blank" rel="noopener"><img src="images/feed/tanya-1.webp" srcset="images/feed/tanya-1-300.webp 300w, images/feed/tanya-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Tu apartamento no necesita más metros, necesita mejores decisiones." loading="lazy"><span class="tipo">Carrusel</span></a>
-        <a href="https://www.instagram.com/tanya.mrhome/p/DfZuJYVyl1z/" target="_blank" rel="noopener"><img src="images/feed/tanya-2.webp" srcset="images/feed/tanya-2-300.webp 300w, images/feed/tanya-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: always believe that something magical is about to happen" loading="lazy"><span class="tipo">Post</span></a>
-        <a href="https://www.instagram.com/tanya.mrhome/reel/DfIIO19yXu2/" target="_blank" rel="noopener"><img src="images/feed/tanya-3.webp" srcset="images/feed/tanya-3-300.webp 300w, images/feed/tanya-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: 5 años pasan rápido." loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/tanya.mrhome/reel/DgFwqzvTfUi/" target="_blank" rel="noopener"><img src="images/feed/tanya-1.webp" srcset="images/feed/tanya-1-300.webp 300w, images/feed/tanya-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Me lo dijeron en los comentarios y tienen razón: a veces hablamos tanto de precios que terminamos mareando." loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/tanya.mrhome/p/Df-CNjJHSSt/" target="_blank" rel="noopener"><img src="images/feed/tanya-2.webp" srcset="images/feed/tanya-2-300.webp 300w, images/feed/tanya-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Photo by Tanya Gómez Bienes Raíces RD on November 20, 2026." loading="lazy"><span class="tipo">Carrusel</span></a>
+        <a href="https://www.instagram.com/tanya.mrhome/reel/Df2Y_jESW-L/" target="_blank" rel="noopener"><img src="images/feed/tanya-3.webp" srcset="images/feed/tanya-3-300.webp 300w, images/feed/tanya-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: RECAP de nuestra actividad del fin de semana anterior en el NUEVO BLUE POINT." loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
 
@@ -456,13 +525,13 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">02</span>
         <h3>Dra. Alfonsina Cruz</h3>
         <p class="caso-s">Odontopediatría · Puerto Plata</p>
-        <p class="caso-seg"><b>515</b> seguidores</p>
+        <p class="caso-seg"><b>518</b> seguidores</p>
         <div class="tags"><span>Redes</span><span>Grabación</span><span>Sitio web</span></div>
         <a class="ig" href="https://www.instagram.com/dra.alfonsinacruz/" target="_blank" rel="noopener">@dra.alfonsinacruz <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
         <a href="https://www.instagram.com/dra.alfonsinacruz/reel/DehddEOJhT2/" target="_blank" rel="noopener"><img src="images/feed/alfonsina-1.webp" srcset="images/feed/alfonsina-1-300.webp 300w, images/feed/alfonsina-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Cada niño merece una atención que respete su ritmo, sus necesidades y su forma única de descubrir el mundo." loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/dra.alfonsinacruz/p/DeUhdRGpsXN/" target="_blank" rel="noopener"><img src="images/feed/alfonsina-2.webp" srcset="images/feed/alfonsina-2-300.webp 300w, images/feed/alfonsina-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: ¿Sabías que no solo los dulces pueden favorecer la aparición de caries?" loading="lazy"><span class="tipo">Post</span></a>
+        <a href="https://www.instagram.com/dra.alfonsinacruz/p/DeUhdRGpsXN/" target="_blank" rel="noopener"><img src="images/feed/alfonsina-2.webp" srcset="images/feed/alfonsina-2-300.webp 300w, images/feed/alfonsina-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: Photo by Dra." loading="lazy"><span class="tipo">Post</span></a>
         <a href="https://www.instagram.com/dra.alfonsinacruz/reel/DeIO7klh1Mu/" target="_blank" rel="noopener"><img src="images/feed/alfonsina-3.webp" srcset="images/feed/alfonsina-3-300.webp 300w, images/feed/alfonsina-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Spoiler: Las caries no llegan de la noche a la mañana pero sí puede ir haciendo de las suyas poquito a…" loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
@@ -472,14 +541,14 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">03</span>
         <h3>Los Cookies by Arlina</h3>
         <p class="caso-s">Pastelería boutique · Santiago</p>
-        <p class="caso-seg"><b>44.7 mil</b> seguidores</p>
+        <p class="caso-seg"><b>44.9 mil</b> seguidores</p>
         <div class="tags"><span>Redes</span><span>Diseño</span><span>Video</span></div>
         <a class="ig" href="https://www.instagram.com/loscookiesbyarlina/" target="_blank" rel="noopener">@loscookiesbyarlina <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/loscookiesbyarlina/reel/DfcIgaPhbMy/" target="_blank" rel="noopener"><img src="images/feed/cookies-1.webp" srcset="images/feed/cookies-1-300.webp 300w, images/feed/cookies-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: ¡El otoño sabe a auyama!" loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/loscookiesbyarlina/reel/DfVey51iRRY/" target="_blank" rel="noopener"><img src="images/feed/cookies-2.webp" srcset="images/feed/cookies-2-300.webp 300w, images/feed/cookies-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Gracias a cada persona que nos acompañó, nos apoyó y formó parte de este comienzo." loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/loscookiesbyarlina/p/DfQVGo4mdtJ/" target="_blank" rel="noopener"><img src="images/feed/cookies-3.webp" srcset="images/feed/cookies-3-300.webp 300w, images/feed/cookies-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Un día que quedará guardado en nuestro corazón." loading="lazy"><span class="tipo">Carrusel</span></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/p/Df8GrpVGaFB/" target="_blank" rel="noopener"><img src="images/feed/cookies-1.webp" srcset="images/feed/cookies-1-300.webp 300w, images/feed/cookies-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Photo by Los Cookies by Arlina Fernández on November 19, 2026." loading="lazy"><span class="tipo">Carrusel</span></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/reel/Df47DvtC2RN/" target="_blank" rel="noopener"><img src="images/feed/cookies-2.webp" srcset="images/feed/cookies-2-300.webp 300w, images/feed/cookies-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: ¡Organizar tu mesa de Thanksgiving puede ser más fácil de lo que imaginas!" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/loscookiesbyarlina/reel/DfstYpVCFpX/" target="_blank" rel="noopener"><img src="images/feed/cookies-3.webp" srcset="images/feed/cookies-3-300.webp 300w, images/feed/cookies-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: ¿Y si te dijéramos que esta calabacita esconde algo delicioso?" loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
 
@@ -493,9 +562,9 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <a class="ig" href="https://www.instagram.com/psilauralizardov/" target="_blank" rel="noopener">@psilauralizardov <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/psilauralizardov/reel/Dfm60UczkCA/" target="_blank" rel="noopener"><img src="images/feed/laura-1.webp" srcset="images/feed/laura-1-300.webp 300w, images/feed/laura-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Entre innings, errores y home runs, hay algo que también aplica para el amor: No confundamos intensidad…" loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/psilauralizardov/reel/DfYIz6zzOiZ/" target="_blank" rel="noopener"><img src="images/feed/laura-2.webp" srcset="images/feed/laura-2-300.webp 300w, images/feed/laura-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: un grwm un poquito caótico (con llanto de por medio y todo), pero lo logramos Acompáñenme a prepararme…" loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/psilauralizardov/reel/DfU2JofzK_C/" target="_blank" rel="noopener"><img src="images/feed/laura-3.webp" srcset="images/feed/laura-3-300.webp 300w, images/feed/laura-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Si estás viviendo una situación similar, quiero que recuerdes algo: no tienes que esperar a que vuelva a…" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/psilauralizardov/p/DgDOvQ1JeRr/" target="_blank" rel="noopener"><img src="images/feed/laura-1.webp" srcset="images/feed/laura-1-300.webp 300w, images/feed/laura-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Photo by Laura Lizardo Psicóloga on November 22, 2026." loading="lazy"><span class="tipo">Carrusel</span></a>
+        <a href="https://www.instagram.com/psilauralizardov/p/Df8HvqonSp1/" target="_blank" rel="noopener"><img src="images/feed/laura-2.webp" srcset="images/feed/laura-2-300.webp 300w, images/feed/laura-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Carrusel: Photo by Laura Lizardo Psicóloga on November 19, 2026." loading="lazy"><span class="tipo">Carrusel</span></a>
+        <a href="https://www.instagram.com/psilauralizardov/reel/Df0UfLbTr4q/" target="_blank" rel="noopener"><img src="images/feed/laura-3.webp" srcset="images/feed/laura-3-300.webp 300w, images/feed/laura-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Que te cueste irte no significa que tengas que quedarte." loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
 
@@ -504,14 +573,14 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">05</span>
         <h3>Grupo KSI</h3>
         <p class="caso-s">Constructora · Hacienda Gurabo y El Doral</p>
-        <p class="caso-seg"><b>2,936</b> seguidores</p>
+        <p class="caso-seg"><b>2,987</b> seguidores</p>
         <div class="tags"><span>Redes</span><span>Leads</span><span>Sitio web</span></div>
         <a class="ig" href="https://www.instagram.com/grupoksird/" target="_blank" rel="noopener">@grupoksird <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/grupoksird/p/DfmtH9Ajnog/" target="_blank" rel="noopener"><img src="images/feed/ksi-1.webp" srcset="images/feed/ksi-1-300.webp 300w, images/feed/ksi-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: Invierte hoy en lo que mañana será parte de tu patrimonio." loading="lazy"><span class="tipo">Post</span></a>
-        <a href="https://www.instagram.com/grupoksird/reel/DfkRynJtedy/" target="_blank" rel="noopener"><img src="images/feed/ksi-2.webp" srcset="images/feed/ksi-2-300.webp 300w, images/feed/ksi-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Antes de imaginar la casa, imagina tus días aquí La montaña, el verde y Santiago en el horizonte." loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/grupoksird/p/DfatLjjt2Qw/" target="_blank" rel="noopener"><img src="images/feed/ksi-3.webp" srcset="images/feed/ksi-3-300.webp 300w, images/feed/ksi-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: ¡Nos mudamos para seguir creciendo contigo!" loading="lazy"><span class="tipo">Post</span></a>
+        <a href="https://www.instagram.com/grupoksird/p/DgFow2_hBkR/" target="_blank" rel="noopener"><img src="images/feed/ksi-1.webp" srcset="images/feed/ksi-1-300.webp 300w, images/feed/ksi-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: Photo by Grupo KSI on November 23, 2026." loading="lazy"><span class="tipo">Post</span></a>
+        <a href="https://www.instagram.com/grupoksird/reel/Df-nVBmt11o/" target="_blank" rel="noopener"><img src="images/feed/ksi-2.webp" srcset="images/feed/ksi-2-300.webp 300w, images/feed/ksi-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Tu próxima inversión puede estar a un clic de distancia." loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/grupoksird/p/Df9tnS-vCCC/" target="_blank" rel="noopener"><img src="images/feed/ksi-3.webp" srcset="images/feed/ksi-3-300.webp 300w, images/feed/ksi-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Post: Photo by Grupo KSI on November 20, 2026." loading="lazy"><span class="tipo">Post</span></a>
       </div>
     </article>
 
@@ -520,14 +589,14 @@ footer{background:var(--negro);color:var(--arena);border-top:1px solid var(--lin
         <span class="caso-n">06</span>
         <h3>Duke Fresh Haircuts</h3>
         <p class="caso-s">Barbería · Santiago</p>
-        <p class="caso-seg"><b>1,820</b> seguidores</p>
+        <p class="caso-seg"><b>1,821</b> seguidores</p>
         <div class="tags"><span>Redes</span><span>Reels</span></div>
         <a class="ig" href="https://www.instagram.com/dukefreshhaircuts/" target="_blank" rel="noopener">@dukefreshhaircuts <span class="flecha">↗</span></a>
       </div>
       <div class="tiles">
-        <a href="https://www.instagram.com/dukefreshhaircuts/reel/DflFxYzuFMF/" target="_blank" rel="noopener"><img src="images/feed/duke-1.webp" srcset="images/feed/duke-1-300.webp 300w, images/feed/duke-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Aquí el recorte viene con su coro incluido ¿Ya te toca pasar por dukefreshhaircuts ?" loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/dukefreshhaircuts/reel/DdhuIJ6M7QK/" target="_blank" rel="noopener"><img src="images/feed/duke-2.webp" srcset="images/feed/duke-2-300.webp 300w, images/feed/duke-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Sin chisme no se pueden pelar, pero tiene un costo especial ¿Cuánto tu pagarías?" loading="lazy"><span class="tipo">Reel</span></a>
-        <a href="https://www.instagram.com/dukefreshhaircuts/reel/Dbtw4LQMXGi/" target="_blank" rel="noopener"><img src="images/feed/duke-3.webp" srcset="images/feed/duke-3-300.webp 300w, images/feed/duke-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: ¡Habla claro, patrón!" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/reel/Df-yWH0JP1T/" target="_blank" rel="noopener"><img src="images/feed/duke-1.webp" srcset="images/feed/duke-1-300.webp 300w, images/feed/duke-1.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: ¿Qué nombre le ponemos a este sistema?" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/reel/DfvHjwIsLrS/" target="_blank" rel="noopener"><img src="images/feed/duke-2.webp" srcset="images/feed/duke-2-300.webp 300w, images/feed/duke-2.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: El Ferrari viene pero hay que vender muchas galleticas todavía" loading="lazy"><span class="tipo">Reel</span></a>
+        <a href="https://www.instagram.com/dukefreshhaircuts/reel/DflFxYzuFMF/" target="_blank" rel="noopener"><img src="images/feed/duke-3.webp" srcset="images/feed/duke-3-300.webp 300w, images/feed/duke-3.webp 600w" sizes="(max-width:760px) 30vw, 220px" width="600" height="800" alt="Reel: Aquí el recorte viene con su coro incluido ¿Ya te toca pasar por dukefreshhaircuts ?" loading="lazy"><span class="tipo">Reel</span></a>
       </div>
     </article>
     <!-- /FEED:CASOS -->
